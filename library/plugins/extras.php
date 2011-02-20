@@ -28,8 +28,8 @@ function word_count() {
 // spam & delete links for all versions of wordpress (call using delete_comment_link(get_comment_ID());)
 function delete_comment_link($id) {
 	if (current_user_can('edit_post')) {
-		echo '| <a href="'.get_bloginfo('wpurl').'/wp-admin/comment.php?action=cdc&c='.$id.'">del</a> ';
-		echo '| <a href="'.get_bloginfo('wpurl').'/wp-admin/comment.php?action=cdc&dt=spam&c='.$id.'">spam</a>';
+		echo '| <a href="'.get_bloginfo('wpurl').'/wp-admin/comment.php?action=cdc&c='.$id.'" title="Delete Comment">Del</a> ';
+		echo '| <a href="'.get_bloginfo('wpurl').'/wp-admin/comment.php?action=cdc&dt=spam&c='.$id.'" title="Mark As Spam">Spam</a>';
 	}
 }
 
