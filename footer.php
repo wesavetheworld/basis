@@ -12,40 +12,46 @@
 			
 				<div id="inner-footer">
 				  
-				  <div id="footer-widget-1" class="footer-widgets col300 clear" role="complementary">
+				  <div id="footer-widget-1" class="footer-widgets col220 clear" role="complementary">
 
-          	<?php if ( ! is_active_sidebar( 'footer-widget-1' ) ) ?>
+            <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-1')) : else : ?>
 
           		<!-- This content shows up if there are no widgets defined in the backend. -->
 
           		<div class="help">
-          			<p>Please activate some Widgets for Footer Widget 1.</p>
+          			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for Footer Widget 1.</p>
           		</div>
+          		
+          	<?php endif; ?>
           		
           </div><!-- End #footer-widget-1 -->
           		
-          <div id="footer-widget-2" class="footer-widgets col300 clear" role="complementary">
+          <div id="footer-widget-2" class="footer-widgets col220 clear" role="complementary">
 
-        	  <?php if ( ! is_active_sidebar( 'footer-widget-2' ) ) ?>
+        	  <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-2')) : else : ?>
 
           		<!-- This content shows up if there are no widgets defined in the backend. -->
 
           		<div class="help">
-          			<p>Please activate some Widgets for Footer Widget 2.</p>
+          			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for Footer Widget 2.</p>
           		</div>
           		
+          	<?php endif; ?>
+          	
           </div><!-- End #footer-widget-2 -->
           
-          <div id="footer-widget-3" class="footer-widgets col300 clear" role="complementary">
+          <div id="footer-widget-3" class="footer-widgets col480 clear" role="complementary">
           		
-        	  <?php if ( ! is_active_sidebar( 'footer-widget-3' ) ) ?>
+        	  <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-3')) : else : ?>
 
           		<!-- This content shows up if there are no widgets defined in the backend. -->
 
           		<div class="help">
-          			<p>Please activate some Widgets for Footer Widget 3.</p>
+          			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for Footer Widget 3.</p>
           		</div>
-
+          		
+          	<?php endif; ?>
+          	
           </div><!-- End #footer-widget-3 -->
 				
 				</div> <!-- end #inner-footer -->

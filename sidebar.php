@@ -10,21 +10,24 @@
 
 <div id="sidebar" class="sidebar col300 clear" role="complementary">
 
-	<?php if ( ! is_active_sidebar( 'primary-sidebar' ) ) ?>
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('primary-sidebar')) : else : ?>
 
 		<!-- This content shows up if there are no widgets defined in the backend. -->
 		
 		<div class="help">
-			<p>Please activate some Widgets for Sidebar 1.</p>
+			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for your Primary Sidebar.</p>
 		</div>
+    
+  <?php endif; ?>
 
-
-	<?php if ( ! is_active_sidebar( 'secondary-sidebar' ) ) ?>
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('secondary-sidebar')) : else : ?>
 
 		<!-- This content shows up if there are no widgets defined in the backend. -->
 		
 		<div class="help">
-			<p>Please activate some Widgets for Sidebar 2.</p>
+			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for your Secondary Sidebar.</p>
 		</div>
+    
+  <?php endif; ?>
 
 </div>
