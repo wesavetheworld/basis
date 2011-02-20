@@ -16,10 +16,6 @@ get_header(); ?>
 				
   				<header>
   					<h2><?php the_title(); ?></h2>
-  					<p class="meta">Posted <time><?php the_time('F jS, Y'); ?></time> by <?php the_author(); ?> <span class="amp">&</span> filed under <?php the_category(', '); ?>.</p>
-  				  <?php // If this post has an associated thumbnail lets display it
-              if ( has_post_thumbnail() ) { the_post_thumbnail(); }
-            ?>
   				</header> <!-- end article header -->
 		
   				<section class="post_content">
@@ -31,8 +27,6 @@ get_header(); ?>
   				</footer> <!-- end article footer -->
 			
   			</article> <!-- end article -->
-			
-  			<?php comments_template(); ?>
 			
   		<?php endwhile; ?>	
 			

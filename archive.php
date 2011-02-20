@@ -33,11 +33,12 @@ get_header(); ?>
 
           <header>
 
-            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+            <h2>
+              <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+            </h2>
 
-            <p class="meta">
-              Posted <time><?php the_time('F jS, Y'); ?></time> by <?php the_author(); ?> <span class="amp">&</span> filed under <?php the_category(', '); ?>.
-            </p>
+            <p class="meta">Posted on: <time><?php the_time('F jS, Y'); ?></time> by <?php the_author(); ?></p>
+            <p class="meta">Categorized as <?php the_category(', '); ?> and containing <?php word_count(); ?> words.</p>
             
             <?php // If this post has an associated thumbnail lets display it
               if ( has_post_thumbnail() ) { the_post_thumbnail(); }
@@ -46,8 +47,6 @@ get_header(); ?>
           </header> <!-- end article header -->
 
           <section class="post_content">
-
-            <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
             <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
 

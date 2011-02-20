@@ -20,7 +20,12 @@ get_header(); ?>
 
         <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
-        <p class="meta">Posted <time><?php the_time('F jS, Y'); ?></time> by <?php the_author(); ?> <span class="amp">&</span> filed under <?php the_category(', '); ?>.</p>
+        <p class="meta">
+          Posted on: <time><?php the_time('F jS, Y'); ?></time>
+          by <?php the_author(); ?>
+          categorized: <?php the_category(', '); ?>
+          containing: <?php word_count(); ?> words
+        </p>
 
         <?php // If this post has an associated thumbnail lets display it
           if ( has_post_thumbnail() ) { the_post_thumbnail(); }

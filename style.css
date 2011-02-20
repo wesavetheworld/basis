@@ -175,7 +175,7 @@ header[role=banner] {}
 .menu ul li ul li:hover ul.sub-menu { left: auto; }
 
 /* primary menu styles */
-#menu-primary { float: left; }
+#menu-primary {}
 .primary-menu { background: #607890; margin: 1.1em 0; }
 .primary-menu ul {}
 .primary-menu ul li { list-style-type: none; float: left; }
@@ -218,7 +218,7 @@ header[role=banner] {}
 .primary-menu ul li ul li:hover ul.sub-menu { left: auto; }
 
 /* secondary menu styles */
-#menu-secondary { float: right; }
+#menu-secondary {}
 .secondary-menu { background: #607890; margin: 1.1em 0; }
 .secondary-menu ul {}
 .secondary-menu ul li { list-style-type: none; float: left; }
