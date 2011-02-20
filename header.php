@@ -70,15 +70,13 @@
 			
 			<header role="banner">
 				<div id="inner-header">
-				  
 					<h1 id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
-					
-					<nav role="navigation">
-						<?php // Only the primary menu is enabled by default. Uncomment the second line to enable the secondary menu
-						  basis_primary_menu();
-						  //basis_secondary_menu();
-						?>
-					</nav>
-				
 				</div> <!-- end #inner-header -->
 			</header> <!-- end header -->
+			
+			<nav role="navigation">
+				<?php // Only the primary menu is enabled by default. Uncomment the second line to enable the secondary menu
+				  basis_primary_menu();
+				  //basis_secondary_menu();
+				?>
+			</nav>
