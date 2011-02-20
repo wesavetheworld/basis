@@ -134,7 +134,7 @@ header[role=banner] {}
 
 /* general menu styles */
 .menu { background: #607890; margin: 1.1em 0; }
-.menu ul {  }
+.menu ul {}
 .menu ul li { list-style-type: none; float: left; }
 
 .menu ul li a {
@@ -146,10 +146,10 @@ header[role=banner] {}
 }
 
 .menu ul li:last-child a {}
-.menu ul li a:hover { background: #036; color: #fff; }
+.menu ul li a:hover { background: #036; }
 
 .menu ul li.current-menu-item a,
-.menu ul li.current_page_item a {}
+.menu ul li.current_page_item a { background: #036; }
 
 .menu ul li ul.sub-menu {
   position: absolute;
@@ -175,8 +175,9 @@ header[role=banner] {}
 .menu ul li ul li:hover ul.sub-menu { left: auto; }
 
 /* primary menu styles */
-.primary-menu { float: left; margin: 1.1em 0; }
-.primary-menu ul { background: #215ea3; }
+#menu-primary { float: left; }
+.primary-menu { background: #607890; margin: 1.1em 0; }
+.primary-menu ul {}
 .primary-menu ul li { list-style-type: none; float: left; }
 
 .primary-menu ul li a {
@@ -188,10 +189,10 @@ header[role=banner] {}
 }
 
 .primary-menu ul li:last-child a {}
-.primary-menu ul li a:hover { background: #036; color: #fff; }
+.primary-menu ul li a:hover { background: #036; }
 
 .primary-menu ul li.current-menu-item a,
-.primary-menu ul li.current_page_item a {}
+.primary-menu ul li.current_page_item a { background: #036; }
 
 .primary-menu ul li ul.sub-menu {
   position: absolute;
@@ -217,8 +218,9 @@ header[role=banner] {}
 .primary-menu ul li ul li:hover ul.sub-menu { left: auto; }
 
 /* secondary menu styles */
-.secondary-menu { float: right; margin: 1.1em 0; }
-.secondary-menu ul { background: #215ea3; }
+#menu-secondary { float: right; }
+.secondary-menu { background: #607890; margin: 1.1em 0; }
+.secondary-menu ul {}
 .secondary-menu ul li { list-style-type: none; float: left; }
 
 .secondary-menu ul li a {
@@ -230,10 +232,10 @@ header[role=banner] {}
 }
 
 .secondary-menu ul li:last-child a {}
-.secondary-menu ul li a:hover { background: #036; color: #fff; }
+.secondary-menu ul li a:hover { background: #036; }
 
 .secondary-menu ul li.current-menu-item a,
-.secondary-menu ul li.current_page_item a {}
+.secondary-menu ul li.current_page_item a { background: #036; }
 
 .secondary-menu ul li ul.sub-menu {
   position: absolute;
