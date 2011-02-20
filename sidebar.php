@@ -10,7 +10,7 @@
 
 <div id="sidebar" class="sidebar col300 clear" role="complementary">
 
-	<?php if ( ! is_active_sidebar( 'sidebar-1' ) ) ?>
+	<?php if ( ! is_active_sidebar( 'primary-sidebar' ) ) ?>
 
 		<!-- This content shows up if there are no widgets defined in the backend. -->
 		
@@ -19,7 +19,7 @@
 		</div>
 
 
-	<?php if ( ! is_active_sidebar( 'sidebar-2' ) ) ?>
+	<?php if ( ! is_active_sidebar( 'secondary-sidebar' ) ) ?>
 
 		<!-- This content shows up if there are no widgets defined in the backend. -->
 		
