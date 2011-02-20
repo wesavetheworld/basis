@@ -1,0 +1,73 @@
+<?php 
+
+/**
+*
+* This is the default footer for the Basis parent theme
+*
+*/
+
+?>
+
+			<footer role="contentinfo">
+			
+				<div id="inner-footer">
+				  
+				  <div id="footer-widget-1" class="footer-widgets col300 clear" role="complementary">
+
+          	<?php if ( ! is_active_sidebar( 'footer-widget-1' ) ) ?>
+
+          		<!-- This content shows up if there are no widgets defined in the backend. -->
+
+          		<div class="help">
+          			<p>Please activate some Widgets for Footer Widget 1.</p>
+          		</div>
+          		
+          </div><!-- End #footer-widget-1 -->
+          		
+          <div id="footer-widget-2" class="footer-widgets col300 clear" role="complementary">
+
+        	  <?php if ( ! is_active_sidebar( 'footer-widget-2' ) ) ?>
+
+          		<!-- This content shows up if there are no widgets defined in the backend. -->
+
+          		<div class="help">
+          			<p>Please activate some Widgets for Footer Widget 2.</p>
+          		</div>
+          		
+          </div><!-- End #footer-widget-2 -->
+          
+          <div id="footer-widget-3" class="footer-widgets col300 clear" role="complementary">
+          		
+        	  <?php if ( ! is_active_sidebar( 'footer-widget-3' ) ) ?>
+
+          		<!-- This content shows up if there are no widgets defined in the backend. -->
+
+          		<div class="help">
+          			<p>Please activate some Widgets for Footer Widget 3.</p>
+          		</div>
+
+          </div><!-- End #footer-widget-3 -->
+				
+				</div> <!-- end #inner-footer -->
+				
+			</footer> <!-- end footer -->
+		
+		</div> <!-- end #container -->
+		
+		<?php wp_footer(); // js scripts are inserted using this function ?>
+
+		<!-- custom scripts -->
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/scripts.js"></script>
+		
+		<!--[if lt IE 7 ]>
+    		<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/ie/dd_belatedpng.js"></script>
+    		<script> DD_belatedPNG.fix('img, .png_bg'); </script>
+		<![endif]-->		
+		
+		<!-- Insert Analytics -->
+		
+		<!-- End Analytics -->
+
+	</body>
+
+</html>

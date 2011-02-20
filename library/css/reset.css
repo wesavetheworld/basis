@@ -1,0 +1,126 @@
+/******************************************************************
+
+Basis Theme Reset Stylesheet
+
+Designed by Dominic Giglio
+http://utadvisors.com/basis
+
+Adapted from the Bones Theme Template
+http://themble.com/bones
+eddie@themble.com
+
+Design Copyright 2010. All Rights Reserved. 
+XHTML/CSS released under the GPLv3 licence.
+
+Special Thanks to:
+Paul Irish & the HTML5 Boilerplate
+Yoast for some WP functions & optimization ideas
+Andrew Rogers for code optimization
+David Dellanave for speed & code optimization
+and several other developers. :)
+
+I ADVISE AGAINST EDITING THESE FILES. USE THE STYLE.CSS FILE IN THE ROOT.
+
+******************************************************************/
+
+
+/******************************************************************
+RESET STYLES
+******************************************************************/
+
+/* general reset */
+html, body, div, span, object, embed, ruby, output, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,  footer, header, hgroup, 
+menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }     
+html { overflow-y: scroll; }
+
+/* html 5 reset */             
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/* ul & li resets */
+ol, ul { list-style: none; }
+
+/* blockquote reset */
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+/* link style resets */
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+a:hover, a:active { outline: none; }
+
+/* table resets */
+table { border-collapse: collapse; border-spacing: 0; }
+td, td img { vertical-align: top; } 
+
+/* type & header styles */ 
+p { hyphenate: auto; hyphenate-before: 2; hyphenate-after: 3; hyphenate-lines: 3; orphans: 4; }
+select, input, textarea, button { font: 99% sans-serif; }
+body, select, input, textarea {   color: #444; }
+small, .small { font-size: 0.75em; letter-spacing: .05em; font-style: italic; line-height: 1.75em; }
+strong, th, .strong { font-weight: bold; }
+em, .em { font-style: italic; }
+ins, .ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark, .mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del, .del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+/* code & pre box resets */
+pre {  padding: 15px;  white-space: pre;  white-space: pre-wrap;  white-space: pre-line;  word-wrap: break-word; }
+
+/* form & input resets */
+pre, code, kbd, samp { font-family: monospace, sans-serif; margin: 1.5em; }
+input, select { vertical-align: middle; }
+textarea { overflow: auto; } 
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+input:valid, textarea:valid {}
+input:invalid, textarea:invalid { border-radius: 1px;  -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red;  box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+button {  width: auto; overflow: visible; }
+
+/* image resets */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/* hidden elements */
+.hidden { display: none; visibility: hidden; } 
+.visuallyhidden { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
+
+/* clearfixes */
+.clear:after, .menu:after {content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clear { display: inline-block; }
+* html .clear { height: 1%; }
+.clear { display: block; }
+
+/******************************************************************
+COMMON & REUSABLE STYLES
+******************************************************************/
+
+/* floats */
+.left { float: left; }
+.right { float: right; }
+
+/* text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* highlighting search term on search page */
+mark, .search-term { background: #EBE16F; }
+
+/* alerts & notices */
+.help, .info, .error, .success { margin: 10px; padding: 10px; border: 1px solid #cecece; }
+.help { border-color: #E0C618; background: #EBE16F; }
+.info { border-color: #92cae4; background: #d5edf8; }
+.error { border-color: #fbc2c4; background: #fbe3e4; }
+.success { border-color: #c6d880; background: #e6efc2; }

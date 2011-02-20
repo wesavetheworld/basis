@@ -1,0 +1,109 @@
+<?php
+
+/**
+*
+* This is the core Basis functions file. In here we will enable or disable the
+* more "general" WordPress related features. A lot of this functionality comes
+* from the excellent work of Chris Coyier and Jeff Starr at http://digwp.com
+*
+*  1.) Add theme support for RSS Feeds, Post Thumbnails & Menus
+*  2.) Remove junk from the head section
+*  3.) Remove version info from all pages and feeds
+*  4.) Insert favicon link the head section
+*  5.) Include jQuery from Google
+*  6.) Enable threaded comments
+*  7.) Create a custom excerpt ellipses (for >= WP2.9 & <= WP2.8)
+*  8.) Create a custom read more link with no more jumping
+*  9.) Insert category id in body_class() and post_class()
+* 10.) Brand the text in the footer of all admin pages
+*
+*/
+
+// add feed links to the head section of every page
+add_theme_support('automatic-feed-links');
+
+// and enable post thumbnail support
+add_theme_support('post-thumbnails');
+
+// set initial port thumbnail size and define alternatives
+// to create more sizes just copy and paste one of the lines
+// below and input your own sizes
+set_post_thumbnail_size(125, 125, true);
+add_image_size( 'basis-thumb-600', 600, 150, true );
+add_image_size( 'basis-thumb-300', 300, 100, true );
+
+// remove the junk from the head section
+function basis_remove_head_junk() {
+  remove_action('wp_head', 'rsd_link');
+  remove_action('wp_head', 'index_rel_link');
+  remove_action('wp_head', 'wlwmanifest_link');
+  remove_action('wp_head', 'start_post_rel_link', 10, 0);
+  remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+  remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+}
+add_action('init', 'basis_remove_head_junk');
+
+// remove all version info from head and feeds
+function complete_version_removal() {
+	return '';
+}
+add_filter('the_generator', 'complete_version_removal');
+
+// insert favicon link in the head section
+function basis_favicon() {
+    echo '<link rel="shortcut icon" type="image/x-icon" href="'.get_template_directory_uri().'/library/images/favicon.ico" />';
+}
+add_action('wp_head', 'basis_favicon');
+
+// include jquery the smart way
+if (!is_admin()) {
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false);
+	wp_enqueue_script('jquery');
+}
+
+// enable threaded comments (must come after jquery is loaded)
+function enable_threaded_comments() {
+	if (!is_admin()) {
+		if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1))
+			wp_enqueue_script('comment-reply');
+		}
+}
+add_action('get_header', 'enable_threaded_comments');
+
+// custom excerpt ellipses for 2.9+
+function basis_custom_excerpt_more($more) {
+	return '...';
+}
+add_filter('excerpt_more', 'basis_custom_excerpt_more');
+
+// custom excerpt ellipses for 2.8-
+// function basis_custom_excerpt_more($excerpt) {
+// 	return str_replace('[...]', '...', $excerpt);
+// }
+// add_filter('wp_trim_excerpt', 'basis_custom_excerpt_more');
+
+// custom read more link with no more jumping
+function no_more_jumping($post) {
+	return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'Continue Reading'.'</a>';
+}
+add_filter('excerpt_more', 'no_more_jumping');
+add_filter('the_content_more_link', 'remove_more_jump_link');
+
+// insert category id in body_class() and post_class()
+function category_id_class($classes) {
+	global $post;
+	foreach((get_the_category($post->ID)) as $category)
+		$classes [] = 'cat-' . $category->cat_ID . '-id';
+		return $classes;
+}
+add_filter('post_class', 'category_id_class');
+add_filter('body_class', 'category_id_class');
+
+// brand the text in the footer of all admin pages
+function  basis_admin_footer_text() {
+	echo 'Theme designed by <a href="http://utadvisors.com">Universal Technology Advisors</a> using the Basis Theme Framework';
+} 
+add_filter('admin_footer_text', 'basis_admin_footer_text');
+
+?>

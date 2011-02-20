@@ -1,0 +1,6 @@
+# Disable browsing of all directories
+Options -Indexes
+
+# Pretty WordPress login URL
+RewriteRule ^login$ http://yoursite.com/wp-login.php [NC,L]
+
