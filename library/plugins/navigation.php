@@ -43,7 +43,7 @@ function basis_primary_menu() {
   if ( function_exists('wp_nav_menu') ) {
     // call the WP3.0 menu
     wp_nav_menu(array(
-      'theme_location'  => 'Primary Menu',
+      'theme_location'  => 'primary_menu',
       'container_class' => 'primary-menu',
       'fallback_cb'     => 'basis_menu_fallback'));
   } else {
@@ -56,7 +56,7 @@ function basis_primary_menu() {
 function basis_secondary_menu() {
   if ( function_exists('wp_nav_menu') ) {
     wp_nav_menu(array(
-      'theme_location'  => 'Secondary Menu',
+      'theme_location'  => 'secondary_menu',
       'container_class' => 'secondary-menu',
       'fallback_cb'     => 'basis_menu_fallback'));
   } else {
