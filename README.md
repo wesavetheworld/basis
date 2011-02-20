@@ -45,6 +45,6 @@ Both Bones and Genesis provide incredibly powerful plugin functionality built in
 
 The Basis Theme Framework has been designed as a modular system. You will find all of the usual files in the root directory of the parent theme, however, once you did deeper into the library directory you begin to notice that all of the extra functionality provided by Basis has been subdivided into directories that are named to help describe what they do. All of these files can be included or excluded through the functions.php file. That one file allows the theme designer complete control over what is and is not included in the final site design.
 
-#
+##
 
 &copy; 2011 Dominic Giglio, All Rights Reserved. Released under the GPLv3 License. See the LICENSE file for further information.
