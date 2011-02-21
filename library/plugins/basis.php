@@ -64,25 +64,6 @@ function enable_threaded_comments() {
 }
 add_action('get_header', 'enable_threaded_comments');
 
-// custom excerpt ellipses for 2.9+
-function basis_custom_excerpt_more($more) {
-	return '...';
-}
-add_filter('excerpt_more', 'basis_custom_excerpt_more');
-
-// custom excerpt ellipses for 2.8-
-// function basis_custom_excerpt_more($excerpt) {
-// 	return str_replace('[...]', '...', $excerpt);
-// }
-// add_filter('wp_trim_excerpt', 'basis_custom_excerpt_more');
-
-// custom read more link with no more jumping
-function no_more_jumping($post) {
-	return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'Continue Reading'.'</a>';
-}
-add_filter('excerpt_more', 'no_more_jumping');
-add_filter('the_content_more_link', 'remove_more_jump_link');
-
 // insert category id in body_class() and post_class()
 function category_id_class($classes) {
 	global $post;
