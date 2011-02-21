@@ -25,13 +25,6 @@ add_theme_support('automatic-feed-links');
 // and enable post thumbnail support
 add_theme_support('post-thumbnails');
 
-// set initial port thumbnail size and define alternatives
-// to create more sizes just copy and paste one of the lines
-// below and input your own sizes
-set_post_thumbnail_size(125, 125, true);
-add_image_size( 'basis-thumb-600', 600, 150, true );
-add_image_size( 'basis-thumb-300', 300, 100, true );
-
 // remove the junk from the head section
 function basis_remove_head_junk() {
   remove_action('wp_head', 'rsd_link');

@@ -18,9 +18,11 @@ get_header(); ?>
 				
   				<header>
   				  <div id="post-img">
-              <?php // If this post has an associated thumbnail lets display it
-                if ( has_post_thumbnail() ) { the_post_thumbnail(); }
-              ?>
+              <?php if ( has_post_thumbnail() ) : ?>
+               <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+               <?php the_post_thumbnail('thumbnail'); ?>
+               </a>
+              <?php endif; ?>
             </div>
             <div id="post-preview">
     					<h2><?php the_title(); ?></h2>

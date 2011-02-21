@@ -32,6 +32,14 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" class="clear">
 
           <header>
+            
+            <div id="post-img">
+              <?php if ( has_post_thumbnail() ) : ?>
+               <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+               <?php the_post_thumbnail('thumbnail'); ?>
+               </a>
+              <?php endif; ?>
+            </div>
 
             <h2>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
@@ -39,10 +47,6 @@ get_header(); ?>
 
             <p class="meta">Posted on: <time><?php the_time('F jS, Y'); ?></time> by <?php the_author(); ?></p>
             <p class="meta">Categorized as <?php the_category(', '); ?> and containing <?php word_count(); ?> words.</p>
-            
-            <?php // If this post has an associated thumbnail lets display it
-              if ( has_post_thumbnail() ) { the_post_thumbnail(); }
-            ?>
 
           </header> <!-- end article header -->
 
