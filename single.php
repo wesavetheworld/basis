@@ -17,16 +17,17 @@ get_header(); ?>
   			<article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
 				
   				<header>
-  					<h2><?php the_title(); ?></h2>
-  					<p class="meta">
-              Posted on: <time><?php the_time('F jS, Y'); ?></time>
-              by <?php the_author(); ?>
-              categorized: <?php the_category(', '); ?>
-              containing: <?php word_count(); ?> words
-            </p>
-  					<?php // If this post has an associated thumbnail lets display it
-              if ( has_post_thumbnail() ) { the_post_thumbnail(); }
-            ?>
+  				  <div id="post-img">
+              <?php // If this post has an associated thumbnail lets display it
+                if ( has_post_thumbnail() ) { the_post_thumbnail(); }
+              ?>
+            </div>
+            <div id="post-preview">
+    					<h2><?php the_title(); ?></h2>
+    					<p class="meta">
+                by <?php the_author(); ?> on <time><?php the_time('F jS, Y'); ?></time><br />
+                in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>
+            </div>
   				</header> <!-- end article header -->
 			
   				<section class="post_content clear">

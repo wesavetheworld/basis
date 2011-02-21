@@ -17,23 +17,25 @@ get_header(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
 
       <header>
-
-        <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
-        <p class="meta">
-          Posted on: <time><?php the_time('F jS, Y'); ?></time>
-          by <?php the_author(); ?>
-          categorized: <?php the_category(', '); ?>
-          containing: <?php word_count(); ?> words
-        </p>
-
-        <?php // If this post has an associated thumbnail lets display it
-          if ( has_post_thumbnail() ) { the_post_thumbnail(); }
-        ?>
+        
+        <div id="post-img">
+          <?php // If this post has an associated thumbnail lets display it
+            if ( has_post_thumbnail() ) { the_post_thumbnail(); }
+          ?>
+        </div>
+        
+        <div id="post-preview">
+          <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+          <p class="meta">
+            Posted on: <time><?php the_time('F jS, Y'); ?></time>
+            by <?php the_author(); ?>
+            categorized: <?php the_category(', '); ?>
+          </p>
+        </div>
       
       </header> <!-- end article header -->
 
-      <section class="post_content clear">
+    <section class="post_content clear">
       <?php the_excerpt('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
 
     </section> <!-- end article section -->
@@ -45,8 +47,6 @@ get_header(); ?>
     </footer> <!-- end article footer -->
 
   </article> <!-- end article -->
-
-  <?php comments_template(); ?>
 
 <?php endwhile; ?>	
 
