@@ -9,7 +9,7 @@
 
 // define the constants needed to support custom headers
 define('HEADER_TEXTCOLOR', 'ffffff');
-define('HEADER_IMAGE', get_bloginfo('stylesheet_directory') . '/library/images/headers/basis-parent-header.jpg');
+define('HEADER_IMAGE', get_bloginfo('stylesheet_directory') . '/library/images/headers/header.jpg');
 define('HEADER_IMAGE_WIDTH', 1000); // use width and height appropriate for your theme
 define('HEADER_IMAGE_HEIGHT', 200);
 
