@@ -38,14 +38,11 @@ get_header(); ?>
       </header> <!-- end article header -->
 
     <section class="post_content clear">
-      <?php the_excerpt('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
-
+      <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
     </section> <!-- end article section -->
 
     <footer>
-
       <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
-
     </footer> <!-- end article footer -->
 
   </article> <!-- end article -->
