@@ -10,7 +10,7 @@
 // define the constants needed to support custom headers
 define('HEADER_TEXTCOLOR', 'ffffff');
 define('HEADER_IMAGE', get_bloginfo('stylesheet_directory') . '/library/images/headers/basis-parent-header.jpg');
-define('HEADER_IMAGE_WIDTH', 980); // use width and height appropriate for your theme
+define('HEADER_IMAGE_WIDTH', 1000); // use width and height appropriate for your theme
 define('HEADER_IMAGE_HEIGHT', 200);
 
 // If you don't want to allow changing the header text color
@@ -19,23 +19,24 @@ define('HEADER_IMAGE_HEIGHT', 200);
 // gets included in the site header
 function header_style() {
   ?><style type="text/css">
-      header[role=banner] {
-          background: url(<?php header_image(); ?>);
-          text-indent: -9999em;
-          width: 980px;
-          height: 200px;
-          margin: 0 auto;
-      }
+    #inner-header #logo { float: left; }
+    #inner-header p { float: right; padding: 1.5em; }
+    #custom-header-img {
+      background: url(<?php header_image(); ?>);
+      clear: both;
+      width: 1000px;
+      height: 200px;
+    }
   </style><?php
 }
 
 // gets included in the admin header
 function admin_header_style() {
   ?><style type="text/css">
-      #headimg {
-          width: <?php echo HEADER_IMAGE_WIDTH; ?>px;
-          height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
-      }
+    #headimg {
+      width: <?php echo HEADER_IMAGE_WIDTH; ?>px;
+      height: <?php echo HEADER_IMAGE_HEIGHT; ?>px;
+    }
   </style><?php
 }
 

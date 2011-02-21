@@ -30,8 +30,8 @@ body {
   width: 92%;
   margin: 0 auto;
   padding: 0 4%;
-  max-width: 1024px; /* remove or edit to adjust width */
-  min-width: 1024px; /* remove or edit to adjust width */
+  max-width: 1000px; /* remove or edit to adjust width */
+  min-width: 1000px; /* remove or edit to adjust width */
 }
 
 #main     { margin-left:  0; } /* fixes alignment (defaulted at col620) */

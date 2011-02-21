@@ -72,6 +72,7 @@
 				<div id="inner-header">
 					<h1 id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
 					<p><?php bloginfo('description'); ?></p>
+					<div id="custom-header-img"></div>
 				</div> <!-- end #inner-header -->
 			</header> <!-- end header -->
 			
