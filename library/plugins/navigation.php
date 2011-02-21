@@ -82,7 +82,7 @@ function basis_sidebars() {
       'id'            => "primary-sidebar",
       'before_widget' => '<li id="%1$s" class="sidebar-widget %2$s">',
       'after_widget'  => '</li>',
-      'before_title'  => '<h2 class="sidebar-widgettitle">',
+      'before_title'  => '<h2 class="h3 sidebar-widgettitle">',
       'after_title'   => '</h2>'));
       
     register_sidebar(array(
@@ -90,7 +90,7 @@ function basis_sidebars() {
       'id'            => "secondary-sidebar",
       'before_widget' => '<li id="%1$s" class="sidebar-widget %2$s">',
       'after_widget'  => '</li>',
-      'before_title'  => '<h2 class="sidebar-widgettitle">',
+      'before_title'  => '<h2 class="h3 sidebar-widgettitle">',
       'after_title'   => '</h2>'));
   }
 }
@@ -108,24 +108,24 @@ function basis_footer_widgets() {
       'id'            => "footer-widget-1",
       'before_widget' => '<li id="%1$s" class="footer-widget %2$s">',
       'after_widget'  => '</li>',
-      'before_title'  => '<h3 class="footer-widgettitle">',
-      'after_title'   => '</h3>'));
+      'before_title'  => '<h4 class="footer-widgettitle">',
+      'after_title'   => '</h4>'));
       
     register_sidebar(array(
     	'name'          => __('Footer Widget 2'),
       'id'            => "footer-widget-2",
       'before_widget' => '<li id="%1$s" class="footer-widget %2$s">',
       'after_widget'  => '</li>',
-      'before_title'  => '<h3 class="footer-widgettitle">',
-      'after_title'   => '</h3>'));
+      'before_title'  => '<h4 class="footer-widgettitle">',
+      'after_title'   => '</h4>'));
       
     register_sidebar(array(
     	'name'          => __('Footer Widget 3'),
       'id'            => "footer-widget-3",
       'before_widget' => '<li id="%1$s" class="footer-widget %2$s">',
       'after_widget'  => '</li>',
-      'before_title'  => '<h3 class="footer-widgettitle">',
-      'after_title'   => '</h3>'));
+      'before_title'  => '<h4 class="footer-widgettitle">',
+      'after_title'   => '</h4>'));
   }
 }
 add_action('widgets_init', 'basis_footer_widgets');
