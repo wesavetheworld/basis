@@ -52,6 +52,11 @@ include_once('library/plugins/extras.php');
 ***********************************************************************************/
 include_once('library/plugins/pagenavi.php');
 
+/* Load the custom-header.php file (library/plugins/custom-header.php)
+*  Setup and call all necessary functions to add custom headers
+***********************************************************************************/
+//include_once('library/plugins/custom-header.php');
+
 
 /* Load the comments.php file (library/plugins/comments.php)
 *  This file contains the the custom callback function for the comments loop

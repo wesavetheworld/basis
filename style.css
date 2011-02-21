@@ -30,8 +30,8 @@ body {
   width: 92%;
   margin: 0 auto;
   padding: 0 4%;
-  max-width: 1000px; /* remove or edit to adjust width */
-  min-width: 1000px; /* remove or edit to adjust width */
+  max-width: 1024px; /* remove or edit to adjust width */
+  min-width: 1024px; /* remove or edit to adjust width */
 }
 
 #main     { margin-left: 0;  } /* fixes alignment (defaulted at col620) */
@@ -154,7 +154,7 @@ h5 a, .h5 a { text-decoration: none; font-weight: 500; }
 ******************************************************************/
 header[role=banner] {}
 
-#logo { margin: 1.1em 0; }
+#logo {}
 
 	
 /******************************************************************
@@ -162,7 +162,7 @@ header[role=banner] {}
 ******************************************************************/
 
 /* general menu styles */
-.menu { background: #607890; margin: 1.1em 0; }
+.menu { background: #607890; }
 .menu ul {}
 .menu ul li { list-style-type: none; float: left; }
 
@@ -294,7 +294,7 @@ header[role=banner] {}
 =POST STYLES
 ******************************************************************/
 #content {}
-#main { background-color: #fff; border: solid #dddddd 1px; }
+#main { background-color: #fff; border: solid #dddddd 1px; margin: 2.2em 0; }
 article[id*=post-] { border-bottom: solid #f2f2f2 1px; padding: 2.2em; }
 
 /* archive title */
