@@ -17,7 +17,6 @@ get_header(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
 
       <header>
-        
         <div id="post-img">
           <?php if ( has_post_thumbnail() ) : ?>
            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -25,7 +24,6 @@ get_header(); ?>
            </a>
           <?php endif; ?>
         </div>
-        
         <div id="post-preview">
           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
           <p class="meta">
@@ -34,18 +32,21 @@ get_header(); ?>
             categorized: <?php the_category(', '); ?>
           </p>
         </div>
-      
       </header> <!-- end article header -->
 
-    <section class="post_content clear">
-      <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
-    </section> <!-- end article section -->
+      <section class="post_content clear">
+        <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
+      </section> <!-- end article section -->
 
-    <footer>
-      <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
-    </footer> <!-- end article footer -->
+      <footer>
+        <?php if has_tag() : ?>
+        < p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+        <?php else : ?>
+          <p class="tags">Tags: [this post has not been tagged]</p>
+        <?php endif; ?>
+      </footer> <!-- end article footer -->
 
-  </article> <!-- end article -->
+    </article> <!-- end article -->
 
 <?php endwhile; ?>	
 

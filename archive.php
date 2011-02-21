@@ -32,32 +32,31 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" class="clear">
 
           <header>
-            
-            <div id="post-img">
+  				  <div id="post-img">
               <?php if ( has_post_thumbnail() ) : ?>
                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
                <?php the_post_thumbnail('thumbnail'); ?>
                </a>
               <?php endif; ?>
             </div>
-
-            <h2>
-              <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-            </h2>
-
-            <p class="meta">Posted on: <time><?php the_time('F jS, Y'); ?></time> by <?php the_author(); ?></p>
-            <p class="meta">Categorized as <?php the_category(', '); ?> and containing <?php word_count(); ?> words.</p>
-
-          </header> <!-- end article header -->
+            <div id="post-preview">
+    					<h2><?php the_title(); ?></h2>
+    					<p class="meta">
+                by <?php the_author(); ?> on <time><?php the_time('F jS, Y'); ?></time><br />
+                in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>
+            </div>
+  				</header> <!-- end article header -->
 
           <section class="post_content">
-
             <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
-
           </section> <!-- end article section -->
 
           <footer>
-
+            <?php if has_tag() : ?>
+            < p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+            <?php else : ?>
+              <p class="tags">Tags: [this post has not been tagged]</p>
+            <?php endif; ?>
           </footer> <!-- end article footer -->
 
         </article> <!-- end article -->

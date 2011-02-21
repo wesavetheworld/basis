@@ -21,43 +21,34 @@ get_header(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
 
       <header>
-        
-        <div id="post-img">
+			  <div id="post-img">
           <?php if ( has_post_thumbnail() ) : ?>
            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
            <?php the_post_thumbnail('thumbnail'); ?>
            </a>
           <?php endif; ?>
         </div>
-
-        <h2><?php the_title(); ?></h2>
-
-        <p class="meta">
-          Posted on: <time><?php the_time('F jS, Y'); ?></time>
-          by <?php the_author(); ?>
-          categorized: <?php the_category(', '); ?>
-          containing: <?php word_count(); ?> words
-        </p>
-        
-        <?php // If this post has an associated thumbnail lets display it
-          if ( has_post_thumbnail() ) { the_post_thumbnail(); }
-        ?>
-
-      </header> <!-- end article header -->
+        <div id="post-preview">
+					<h2><?php the_title(); ?></h2>
+					<p class="meta">
+            by <?php the_author(); ?> on <time><?php the_time('F jS, Y'); ?></time><br />
+            in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>
+        </div>
+			</header> <!-- end article header -->
 
       <section class="post_content clear">
+        <?php the_content(); ?>
+      </section> <!-- end article section -->
 
-      <?php the_content(); ?>
+      <footer>
+        <?php if has_tag() : ?>
+        < p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+        <?php else : ?>
+          <p class="tags">Tags: [this post has not been tagged]</p>
+        <?php endif; ?>
+      </footer> <!-- end article footer -->
 
-    </section> <!-- end article section -->
-
-    <footer>
-
-      <p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tags', '<span class="tags-title">Custom Tags:</span> ', ', ' ) ?></p>
-
-    </footer> <!-- end article footer -->
-
-  </article> <!-- end article -->
+    </article> <!-- end article -->
 
   <?php comments_template(); ?>
 

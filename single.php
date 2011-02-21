@@ -37,8 +37,12 @@ get_header(); ?>
   				</section> <!-- end article section -->
 				
   				<footer>
-  					<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
-  				</footer> <!-- end article footer -->
+            <?php if has_tag() : ?>
+            < p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+            <?php else : ?>
+              <p class="tags">Tags: [this post has not been tagged]</p>
+            <?php endif; ?>
+          </footer> <!-- end article footer -->
 			
   			</article> <!-- end article -->
 			
