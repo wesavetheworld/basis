@@ -6,16 +6,14 @@
 * more "general" WordPress related features. A lot of this functionality comes
 * from the excellent work of Chris Coyier and Jeff Starr at http://digwp.com
 *
-*  1.) Add theme support for RSS Feeds, Post Thumbnails & Menus
-*  2.) Remove junk from the head section
-*  3.) Remove version info from all pages and feeds
-*  4.) Insert favicon link the head section
-*  5.) Include jQuery from Google
-*  6.) Enable threaded comments
-*  7.) Create a custom excerpt ellipses (for >= WP2.9 & <= WP2.8)
-*  8.) Create a custom read more link with no more jumping
-*  9.) Insert category id in body_class() and post_class()
-* 10.) Brand the text in the footer of all admin pages
+* 1.) Add theme support for RSS Feeds & Post Thumbnails
+* 2.) Remove junk from the head section
+* 3.) Remove version info from all pages and feeds
+* 4.) Insert favicon link the head section
+* 5.) Include jQuery from Google
+* 6.) Enable threaded comments
+* 7.) Insert category id in body_class() and post_class()
+* 8.) Brand the text in the footer of all admin pages
 *
 */
 
