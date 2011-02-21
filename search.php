@@ -19,6 +19,13 @@ get_header(); ?>
   			<article id="post-<?php the_ID(); ?>" class="clear">
 				
   				<header>
+  				  <div id="post-img">
+              <?php if ( has_post_thumbnail() ) : ?>
+               <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+               <?php the_post_thumbnail('thumbnail'); ?>
+               </a>
+              <?php endif; ?>
+            </div>
   					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
   					<p class="meta">
               Posted on: <time><?php the_time('F jS, Y'); ?></time>

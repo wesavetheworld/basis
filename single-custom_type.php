@@ -21,6 +21,14 @@ get_header(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
 
       <header>
+        
+        <div id="post-img">
+          <?php if ( has_post_thumbnail() ) : ?>
+           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+           <?php the_post_thumbnail('thumbnail'); ?>
+           </a>
+          <?php endif; ?>
+        </div>
 
         <h2><?php the_title(); ?></h2>
 
