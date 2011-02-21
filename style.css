@@ -103,6 +103,26 @@ body.logged-in {} /* if user is logged in */
 body.paged {} /* paged items like search results or archives */
 body.paged-(page number) {} /* individual paged (i.e. body.paged-3) */
 
+/* buttons */
+.button {
+  margin: 1em;
+  text-decoration: none;
+  font-size: 0.846em;
+  line-height: 1.5em;
+  background: #036;
+  padding: .5em 1em;
+  border: solid #f2f2f2 1px;
+  color: #fff;
+  opacity: 0.55;
+}
+
+.button:hover {
+  background: #fff;
+  color: #036;
+  border: solid #036 1px;
+  opacity: 1;
+}
+
 
 /******************************************************************
 =LINK STYLES
@@ -303,8 +323,8 @@ article[id*=post-] { border-bottom: solid #f2f2f2 1px; padding: 2.2em; }
 .meta time {}
 
 /* post headers */
-#post-img { float: left; margin-right: 1.1em; }
-#post-preview { float: right; }
+#post-img { float: left; margin-right: 2.2em; }
+#post-preview { float: left; }
 
 /* post content */
 .post_content { clear: both; }
