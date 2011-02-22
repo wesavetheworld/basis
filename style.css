@@ -103,21 +103,6 @@ body.logged-in {} /* if user is logged in */
 body.paged {} /* paged items like search results or archives */
 body.paged-(page number) {} /* individual paged (i.e. body.paged-3) */
 
-/* buttons */
-.button {
-  margin: .5em;
-  text-decoration: none;
-  font-size: 0.846em;
-  line-height: 1.5em;
-  background: #036;
-  padding: .5em 1em;
-  border: solid #f2f2f2 1px;
-  color: #fff;
-  opacity: 0.55;
-}
-
-.button:hover { opacity: 1; }
-
 
 /******************************************************************
 =LINK STYLES
