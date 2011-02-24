@@ -43,7 +43,9 @@ add_filter('the_generator', 'complete_version_removal');
 
 // insert favicon link in the head section
 function basis_favicon() {
-    echo '<link rel="shortcut icon" type="image/x-icon" href="'.get_template_directory_uri().'/library/images/favicon.ico" />';
+    echo '<link rel="shortcut icon" type="image/x-icon" href="';
+     echo bloginfo('stylesheet_directory');
+    echo '/library/images/favicon.ico" />';
 }
 add_action('wp_head', 'basis_favicon');
 
