@@ -44,7 +44,7 @@ function basis_primary_menu() {
     // call the WP3.0 menu
     wp_nav_menu(array(
       'theme_location'  => 'primary_menu',
-      'container_class' => 'primary-menu',
+      'container_id' => 'primary-menu',
       'fallback_cb'     => 'basis_menu_fallback'));
   } else {
     // fallback if not supported
@@ -57,7 +57,7 @@ function basis_secondary_menu() {
   if ( function_exists('wp_nav_menu') ) {
     wp_nav_menu(array(
       'theme_location'  => 'secondary_menu',
-      'container_class' => 'secondary-menu',
+      'container_id' => 'secondary-menu',
       'fallback_cb'     => 'basis_menu_fallback'));
   } else {
     // fallback if not supported
