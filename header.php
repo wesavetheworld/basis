@@ -76,8 +76,10 @@
 			</header> <!-- end header -->
 			
 			<nav role="navigation">
-				<?php // Only the primary menu is enabled by default. Uncomment the second line to enable the secondary menu
-				  basis_primary_menu();
-				  //basis_secondary_menu();
-				?>
+				<div id="nav-container">
+					<?php // Only the primary menu is enabled by default. Uncomment the first line to enable the secondary menu
+					  //basis_secondary_menu();
+					  basis_primary_menu();
+					?>
+				</div>
 			</nav>
