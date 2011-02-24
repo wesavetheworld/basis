@@ -13,7 +13,8 @@
 * 5.) Include jQuery from Google
 * 6.) Enable threaded comments
 * 7.) Insert category id in body_class() and post_class()
-* 8.) Brand the text in the footer of all admin pages
+* 8.) Create custom search form
+* 9.) Brand the text in the footer of all admin pages
 *
 */
 
@@ -71,6 +72,19 @@ function category_id_class($classes) {
 }
 add_filter('post_class', 'category_id_class');
 add_filter('body_class', 'category_id_class');
+
+// create custom search form
+function my_search_form( $form ) {
+  $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+  <div><label type="hidden" class="screen-reader-text" for="s">' . __('Search for:') . '</label>
+  <input type="text" value="' . get_search_query() . '" name="s" id="s" />
+  <input type="submit" id="searchsubmit" class="button" value="'. esc_attr__('Search') .'" />
+  </div>
+  </form>';
+
+  return $form;
+}
+add_filter( 'get_search_form', 'my_search_form' );
 
 // brand the text in the footer of all admin pages
 function  basis_admin_footer_text() {
