@@ -80,16 +80,15 @@ if ( post_password_required() ) { ?>
 
             <ul id="comment-form-elements" class="clear">
               <li>
-                <label for="author">Name <?php if ($req) echo "(required)"; ?></label>
+                <label for="author">Name <?php if ($req) echo "(required)"; ?></label><br />
                 <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" placeholder="Your Name" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
               </li>
               <li>
-                <label for="email">Mail <?php if ($req) echo "(required)"; ?></label>
+                <label for="email">Mail <?php if ($req) echo "(required <small>will not be published</small>)"; ?></label><br />
                 <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="Your Email" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-                <small>(will not be published)</small>
               </li>
               <li>
-                <label for="url">Website</label>
+                <label for="url">Website</label><br />
                 <input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" placeholder="Your Website" tabindex="3" />
               </li>
             </ul>
