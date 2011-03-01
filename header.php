@@ -27,9 +27,10 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
-		<!-- reset stylesheet -->
+		<!-- reset and parent stylesheets -->
 		<!--[if (gt IE 6)|!(IE)]><!-->
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/reset.css" />
+			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 		<!--<![endif]-->
 		
 		<!-- scripts -->
@@ -50,7 +51,7 @@
 		
 		<!-- main stylesheet is called after wp_head so you can overwrite plugin styles if needed -->
 		
-		<!-- Serve our default style.css to everyone except IE6 -->
+		<!-- Serve our child theme's default style.css to everyone except IE6 -->
 		<!--[if (gt IE 6)|!(IE)]><!-->
 			<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 		<!--<![endif]-->
