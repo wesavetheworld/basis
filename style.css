@@ -11,7 +11,7 @@ Tags: html5, framework, css3, development
 License: GPLv3
 
 This file contains only the most basic styling rules. It handles the alignment fixes for
-#main and #sidebar. It defines the 12 columns used in the Basis Framework grid layout.
+#main and #sidebar. It also defines the 12 columns used in the Basis Framework grid layout.
 
 While you can style your site from this file it's highly reccomended that you use the 
 style.css file included with the Basis Child Theme or a child theme of your own.

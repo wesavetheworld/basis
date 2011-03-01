@@ -19,7 +19,9 @@ Andrew Rogers for code optimization
 David Dellanave for speed & code optimization
 and several other developers. :)
 
-I ADVISE AGAINST EDITING THESE FILES. USE THE STYLE.CSS FILE IN THE ROOT.
+I ADVISE AGAINST EDITING THESE FILES. While you can style your site
+from this file it's highly reccomended that you use the style.css 
+file included with the Basis Child Theme or a child theme of your own.
 
 ******************************************************************/
 
@@ -34,7 +36,20 @@ abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,  footer, header, hgroup, 
-menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }     
+menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/ */
+body { font: 13px/1.231 sans-serif; *font-size: small; } /* Hack retained to preserve specificity */
+select, input, textarea, button { font: 99% sans-serif; }
+     
 html { overflow-y: scroll; }
 
 /* html 5 reset */             
@@ -57,17 +72,29 @@ td, td img { vertical-align: top; }
 
 /* type & header styles */ 
 p { hyphenate: auto; hyphenate-before: 2; hyphenate-after: 3; hyphenate-lines: 3; orphans: 4; }
+
 select, input, textarea, button { font: 99% sans-serif; }
+
 body, select, input, textarea {   color: #444; }
+
 small, .small { font-size: 0.75em; letter-spacing: .05em; font-style: italic; line-height: 1.75em; }
+
 strong, th, .strong { font-weight: bold; }
+
 em, .em { font-style: italic; }
+
 ins, .ins { background-color: #ff9; color: #000; text-decoration: none; }
+
 mark, .mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
 del, .del { text-decoration: line-through; }
+
 abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
 sub { vertical-align: sub; font-size: smaller; }
+
 sup { vertical-align: super; font-size: smaller; }
+
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
 /* code & pre box resets */
@@ -75,17 +102,34 @@ pre {  padding: 15px;  white-space: pre;  white-space: pre-wrap;  white-space: p
 
 /* form & input resets */
 pre, code, kbd, samp { font-family: monospace, sans-serif; margin: 1.5em; }
+
 input, select { vertical-align: middle; }
+
 textarea { overflow: auto; } 
+
 .ie6 legend, .ie7 legend { margin-left: -7px; } 
+
 input[type="radio"] { vertical-align: text-bottom; }
+
 input[type="checkbox"] { vertical-align: bottom; }
+
 .ie7 input[type="checkbox"] { vertical-align: baseline; }
+
 .ie6 input { vertical-align: text-bottom; }
+
 label, input[type=button], input[type=submit], button { cursor: pointer; }
+
 button, input, select, textarea { margin: 0; }
+
 input:valid, textarea:valid {}
-input:invalid, textarea:invalid { border-radius: 1px;  -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red;  box-shadow: 0px 0px 5px red; }
+
+input:invalid, textarea:invalid {
+  border-radius: 1px; 
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 button {  width: auto; overflow: visible; }
 
