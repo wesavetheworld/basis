@@ -42,6 +42,14 @@ get_header(); ?>
             <?php else : ?>
               <p class="tags">Tags: [this post has not been tagged]</p>
             <?php endif; ?>
+            
+            <?php if ( get_the_author_meta( 'description' ) ) { // If a user has filled out their description, show a bio on their entries  ?>
+							<div id="entry-author-info">
+  							<?php echo get_avatar( get_the_author_meta( 'user_email' ), 72 ); ?>
+  							<h4><?php printf( esc_attr__( 'About %s' ), get_the_author() ); ?></h4>
+  							<p><?php the_author_meta( 'description' ); ?></p>
+							</div><!-- #entry-author-info -->
+						<?php } ?>            
           </footer> <!-- end article footer -->
 			
   			</article> <!-- end article -->
