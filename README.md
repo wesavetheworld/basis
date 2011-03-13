@@ -41,9 +41,14 @@ The Genesis framework is based on the parent/child theme design. This makes it e
 Basis
 -----
 
-Both Bones and Genesis provide incredibly powerful plugin functionality built in. A lot of attention has been paid to including features that the user and designer can benefit from. Basis attempts to mitigate many of the "downsides" to each framework by combining the best of each, the parent/child relationship from Genesis with the ease of customization from Bones. The Basis codebase is HEAVILY borrowed from Bones. As of 2/14/11 it is basically a fork of the Bones GitHub project. Basis shares no code whatsoever with Genesis. It simply borrows their approach to theme design by focusing on keeping core Basis functionality in the parent theme and user/developer specific customizations in child themes.
+Both Bones and Genesis provide incredibly powerful plugin functionality built right in. A lot of attention has been paid to including features that the user and designer can benefit from. Basis attempts to mitigate many of the "downsides" to each framework by combining the best of each, the parent/child relationship from Genesis with the ease of customization from Bones. The Basis codebase is HEAVILY borrowed from Bones. As of 2/14/11 it is basically a fork of the Bones GitHub project. Basis shares NO CODE WHATSOEVER with Genesis. It simply borrows their approach to theme design by focusing on keeping core Basis functionality in the parent theme and user/developer specific customizations in child themes.
 
 The Basis Theme Framework has been designed as a modular system. You will find all of the usual files in the root directory of the parent theme, however, once you did deeper into the library directory you begin to notice that all of the extra functionality provided by Basis has been subdivided into directories that are named to help describe what they do. All of these files can be included or excluded through the functions.php file. That one file allows the theme designer complete control over what is and is not included in the final site design.
+
+Grid Based Layout
+-----------------
+
+Basis offers a grid based layout that supports either a fixed width 12 column layout or a fluid width 12 column layout. The classes are all located in the style.css file and are based on the excellent work of [Nathan Smith](http://960.gs/) and [Stephen Bau](http://www.designinfluences.com/fluid960gs/). The names of the classes have been changed to be a little more descriptive but the sizes for both the fixed classes and fluid classes remain the same. The Basis Child Theme incorporates the fluid based layout by default. These classes are completely optional and are included only as an option for rapid prototyping with Basis and for designers to have access to a grid layout if their design calls for it.
 
 - - -
 
