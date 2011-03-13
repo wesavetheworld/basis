@@ -18,7 +18,7 @@ get_header(); ?>
       <?php } elseif (is_tag()) { ?> 
         <h3 class="archive_title"><span>Posts Tagged:</span> <?php single_tag_title(); ?></h3>
       <?php } elseif (is_author()) { ?>
-        <h3 class="archive_title"><span>Posts By:</span> <?php get_the_author_meta('display_name'); ?></h3>
+        <h3 class="archive_title"><span>Posts By:</span> <?php the_author_meta('display_name'); ?></h3>
       <?php } elseif (is_day()) { ?>
         <h3 class="archive_title"><span>Daily Archives:</span> <?php the_time('l, F j, Y'); ?></h3>
       <?php } elseif (is_month()) { ?>
@@ -42,7 +42,7 @@ get_header(); ?>
             <div id="post-preview">
     					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
     					<p class="meta">
-                by <?php the_author(); ?> on <time><?php the_time('F jS, Y'); ?></time><br />
+                by <?php the_author_posts_link(); ?> on <time><?php the_time('F jS, Y'); ?></time><br />
                 in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>
             </div>
   				</header> <!-- end article header -->
