@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div id="content" class="clear">
 
-  <div id="main" class="col620 clear" role="main">
+  <div id="main" class="fluid-8-col clear" role="main">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

@@ -8,7 +8,7 @@
 
 ?>
 
-<div id="sidebar" class="sidebar col300 clear" role="complementary">
+<div id="sidebar" class="sidebar fluid-4-col clear" role="complementary">
 
 	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('primary-sidebar')) : else : ?>
 

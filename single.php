@@ -10,7 +10,7 @@ get_header(); ?>
 			
 	<div id="content" class="clear">
 	
-		<div id="main" class="col620 clear" role="main">
+		<div id="main" class="fluid-8-col clear" role="main">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
@@ -43,8 +43,9 @@ get_header(); ?>
               <p class="tags">Tags: [this post has not been tagged]</p>
             <?php endif; ?>
             
-            <?php if ( get_the_author_meta( 'description' ) ) { // If a user has filled out their description, show a bio on their entries  ?>
-							<div id="entry-author-info">
+            <?php // If a user has filled out their description, show a bio on their entries
+              if ( get_the_author_meta( 'description' ) ) { ?>
+							<div id="entry-author-info" class="clear">
   							<?php echo get_avatar( get_the_author_meta( 'user_email' ), 72 ); ?>
   							<h4><?php printf( esc_attr__( 'About %s' ), get_the_author() ); ?></h4>
   							<p><?php the_author_meta( 'description' ); ?></p>

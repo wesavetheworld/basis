@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="content" class="clear">
 
-  <div id="main" class="clear">
+  <div id="main" class="fluid-8-col clear">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

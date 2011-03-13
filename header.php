@@ -65,7 +65,7 @@
 	
 	<body <?php body_class(); ?>>
 	
-		<div id="container">
+		<div id="container" class="fluid-container">
 			
 			<header role="banner">
 				<div id="inner-header">
