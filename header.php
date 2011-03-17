@@ -33,23 +33,15 @@
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 		<!--<![endif]-->
 		
-		<!-- scripts -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
-		<script>!window.jQuery && document.write(unescape('%3Cscript src="<?php echo get_template_directory_uri(); ?>/library/js/libs/jquery-1.4.2.min.js"%3E%3C/script%3E'))</script>
-		
-		<script src="<?php echo get_template_directory_uri(); ?>/library/js/header.js"></script>
-		
-		<!--[if lt IE 9]>
-			<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/ie/DOMAssistant-2.0.min.js"></script>
-			<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/ie/selectivizr.js"></script>
-		<![endif]-->
+		<!-- modernizr advanced CSS3 and HTML5 detection -->
+		<script src="library/js/modernizr-1.7.min.js"></script>
 		
 		<!-- wordpress head functions -->
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
 		<?php wp_head(); ?>
 		
-		<!-- main stylesheet is called after wp_head so you can overwrite plugin styles if needed -->
+		<!-- main stylesheet is called after wp_head() so you can overwrite plugin styles if needed -->
 		
 		<!-- Serve our child theme's default style.css to everyone except IE6 -->
 		<!--[if (gt IE 6)|!(IE)]><!-->
