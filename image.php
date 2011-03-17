@@ -9,13 +9,13 @@
 
 get_header(); ?>
 
-<div id="content" class="clear">
+<div id="content" class="clearfix">
 
-  <div id="main" class="fluid-8-col clear">
+  <div id="main" class="fluid-8-col clearfix">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
       <header>
         <h1 class="h2">
@@ -23,7 +23,7 @@ get_header(); ?>
         </h1>
       </header>
 
-      <section class="post_content clear">
+      <section class="post_content clearfix">
         <p class="attachment"><a href="<?php echo wp_get_attachment_url($post->ID); ?>"><?php echo wp_get_attachment_image( $post->ID, 'medium' ); ?></a></p>
         <p class="caption"><?php if ( !empty($post->post_excerpt) ) the_excerpt(); // this is the "caption" ?></p>
         <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 
       <footer>
         <nav class="prev-next-links">
-          <ul class="clear">
+          <ul class="clearfix">
             <li><?php previous_image_link() ?></li>
             <li><?php next_image_link() ?></li>
           </ul>

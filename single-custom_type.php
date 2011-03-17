@@ -12,13 +12,13 @@
 
 get_header(); ?>
 
-<div id="content" class="clear">
+<div id="content" class="clearfix">
 
-  <div id="main" class="fluid-8-col clear" role="main">
+  <div id="main" class="fluid-8-col clearfix" role="main">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
       <header>
 			  <div id="post-img">
@@ -36,7 +36,7 @@ get_header(); ?>
         </div>
 			</header> <!-- end article header -->
 
-      <section class="post_content clear">
+      <section class="post_content clearfix">
         <?php the_content(); ?>
       </section> <!-- end article section -->
 

@@ -8,13 +8,13 @@
 
 get_header(); ?>
 
-<div id="content" class="clear">
+<div id="content" class="clearfix">
 
-  <div id="main" class="fluid-8-col clear" role="main">
+  <div id="main" class="fluid-8-col clearfix" role="main">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
       <header>
         <div id="post-img">
@@ -34,7 +34,7 @@ get_header(); ?>
         </div>
       </header> <!-- end article header -->
 
-      <section class="post_content clear">
+      <section class="post_content clearfix">
         <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
       </section> <!-- end article section -->
 
@@ -56,7 +56,7 @@ get_header(); ?>
 
   <?php } else { // if it is disabled, display regular wp prev & next links ?>
     <nav class="wp-prev-next">
-      <ul class="clear">
+      <ul class="clearfix">
         <li class="prev-link"><?php next_posts_link('&laquo; Older Entries') ?></li>
         <li class="next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></li>
       </ul>

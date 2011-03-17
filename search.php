@@ -8,15 +8,15 @@
 
 get_header(); ?>
 			
-	<div id="content" class="clear">
+	<div id="content" class="clearfix">
 	
-		<div id="main" class="fluid-8-col clear" role="main">
+		<div id="main" class="fluid-8-col clearfix" role="main">
 		
 			<h3 class="archive_title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h3>
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-  			<article id="post-<?php the_ID(); ?>" class="clear">
+  			<article id="post-<?php the_ID(); ?>" class="clearfix">
 				
   				<header>
   					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
@@ -46,7 +46,7 @@ get_header(); ?>
 			<?php } else { // if it is disabled, display regular wp prev & next links ?>
 			  
 				<nav class="wp-prev-next">
-					<ul class="clear">
+					<ul class="clearfix">
 						<li class="prev-link"><?php next_posts_link('&laquo; Older Entries') ?></li>
 						<li class="next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></li>
 					</ul>

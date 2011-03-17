@@ -140,11 +140,12 @@ button {  width: auto; overflow: visible; }
 .hidden { display: none; visibility: hidden; } 
 .visuallyhidden { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
 
-/* clearfixes */
-.clear:after, .menu:after {content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-.clear { display: inline-block; }
-* html .clear { height: 1%; }
-.clear { display: block; }
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
 
 /******************************************************************
 COMMON & REUSABLE STYLES
