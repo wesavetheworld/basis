@@ -36,6 +36,11 @@
 		<!-- modernizr advanced CSS3 and HTML5 detection -->
 		<script src="library/js/modernizr-1.7.min.js"></script>
 		
+		<!-- html5shim by Remy Sharp - http://remysharp.com/ -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
 		<!-- wordpress head functions -->
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
