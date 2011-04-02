@@ -34,7 +34,7 @@
 		<!--<![endif]-->
 		
 		<!-- modernizr advanced CSS3 and HTML5 detection -->
-		<script src="library/js/libs/modernizr-1.7.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/modernizr-1.7.min.js"></script>
 		
 		<!-- html5shim by Remy Sharp - http://remysharp.com/ -->
 		<!--[if lt IE 9]>
