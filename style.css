@@ -1,7 +1,7 @@
 /**
 
 Theme Name: Basis
-Theme URI: http://www.utadvisors.com/basis
+Theme URI: http://www.humanshell.net/
 Description: A simple yet advanced custom theme framework
 Author: Dominic Giglio
 Author URI: http://www.humanshell.net
@@ -12,10 +12,11 @@ License: GPLv3
 
 This file contains only the most basic styling rules. It defines the classes for
 a fixed grid based layout based on the excelent work of Nathan Smith from
-http://960.gs. I removed the styling rules for a 16 column layout, deciding
-instead to stick with a 12 column layout only. Using these classes in completely
-optional. They are included with Basis only as one option for rapidly prototyping
-and styling your site.
+http://960.gs. The grid width has been changed from 960px to 1020px to reflect
+the use of newer, more advanced monitors. I also removed the styling rules for
+a 16 column layout, deciding instead to stick with a 12 column layout only.
+Using these classes in completely optional. They are included with Basis only
+as one option for rapidly prototyping and styling your site.
 
 While you can style your site from this file it's highly reccomended that you use the 
 style.css file included with the Basis Child Theme or a child theme of your own.
