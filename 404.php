@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div id="content" class="clearfix">
 
-  <div id="main" class="fluid-8-col clearfix" role="main">
+  <div id="main" class="fgrid-8 clearfix" role="main">
 
     <article id="post-not-found" class="clearfix">
 

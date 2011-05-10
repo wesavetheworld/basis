@@ -10,7 +10,7 @@ get_header(); ?>
 			
 	<div id="content" class="clearfix">
 	
-		<div id="main" class="fluid-8-col clearfix" role="main">
+		<div id="main" class="grid-8 clearfix" role="main">
 		
 			<h3 class="archive_title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h3>
 			

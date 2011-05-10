@@ -11,7 +11,7 @@ get_header(); ?>
 
   <div id="content" class="clearfix">
 
-    <div id="main" class="fluid-8-col clearfix" role="main">
+    <div id="main" class="grid-8 clearfix" role="main">
 
       <?php if (is_category()) { ?>
         <h3 class="archive_title"><span>Posts Categorized:</span> <?php single_cat_title(); ?></h3>

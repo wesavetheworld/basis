@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="content" class="clearfix">
 
-  <div id="main" class="fluid-8-col clearfix">
+  <div id="main" class="grid-8 clearfix">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
