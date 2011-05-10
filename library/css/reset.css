@@ -31,121 +31,173 @@ RESET STYLES
 ******************************************************************/
 
 /* general reset */
-html, body, div, span, object, embed, ruby, output, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,  footer, header, hgroup, 
-menu, nav, section, summary, time, mark, audio, video {
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
 }
 
-/* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/ */
-body { font: 13px/1.231 sans-serif; *font-size: small; } /* Hack retained to preserve specificity */
-select, input, textarea, button { font: 99% sans-serif; }
-     
-html { overflow-y: scroll; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
-/* html 5 reset */             
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-
-/* ul & li resets */
-ol, ul { list-style: none; }
-
-/* blockquote reset */
 blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 
-/* link style resets */
-a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
-a:hover, a:active { outline: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
 
-/* table resets */
-table { border-collapse: collapse; border-spacing: 0; }
-td, td img { vertical-align: top; } 
+ins { background-color: #ff9; color: #000; text-decoration: none; }
 
-/* type & header styles */ 
-p { hyphenate: auto; hyphenate-before: 2; hyphenate-after: 3; hyphenate-lines: 3; orphans: 4; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
 
-select, input, textarea, button { font: 99% sans-serif; }
-
-body, select, input, textarea {   color: #444; }
-
-small, .small { font-size: 0.75em; letter-spacing: .05em; font-style: italic; line-height: 1.75em; }
-
-strong, th, .strong { font-weight: bold; }
-
-em, .em { font-style: italic; }
-
-ins, .ins { background-color: #ff9; color: #000; text-decoration: none; }
-
-mark, .mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
-
-del, .del { text-decoration: line-through; }
+del { text-decoration: line-through; }
 
 abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
 
-sub { vertical-align: sub; font-size: smaller; }
-
-sup { vertical-align: super; font-size: smaller; }
+table { border-collapse: collapse; border-spacing: 0; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-/* code & pre box resets */
-pre {  padding: 15px;  white-space: pre;  white-space: pre-wrap;  white-space: pre-line;  word-wrap: break-word; }
 
-/* form & input resets */
-pre, code, kbd, samp { font-family: monospace, sans-serif; margin: 1.5em; }
+/**
+* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+*/
 
-input, select { vertical-align: middle; }
+body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
 
-textarea { overflow: auto; } 
+/* Normalize monospace sizing:
+en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
-.ie6 legend, .ie7 legend { margin-left: -7px; } 
 
-input[type="radio"] { vertical-align: text-bottom; }
+/**
+* Minimal base styles.
+*/
 
-input[type="checkbox"] { vertical-align: bottom; }
+/*
+1) Always force a scrollbar in non-IE
+2) Remove iOS text size adjust without disabling user zoom:
+www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+*/
 
-.ie7 input[type="checkbox"] { vertical-align: baseline; }
+html { overflow-y: scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  
+/* j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; }
 
-.ie6 input { vertical-align: text-bottom; }
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
 
-label, input[type=button], input[type=submit], button { cursor: pointer; }
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
 
-button, input, select, textarea { margin: 0; }
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
 
-input:valid, textarea:valid {}
+/* Remove margins for navigation lists */
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
 
-input:invalid, textarea:invalid {
-  border-radius: 1px; 
-  -moz-box-shadow: 0px 0px 5px red;
-  -webkit-box-shadow: 0px 0px 5px red;
-  box-shadow: 0px 0px 5px red;
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
 }
 
-.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
-button {  width: auto; overflow: visible; }
+.ie6 legend, .ie7 legend { margin-left: -7px; }
 
-/* image resets */
+/* 1) Make inputs and buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
+2) WebKit browsers add a 2px margin outside the chrome of form elements.
+Firefox adds a 1px margin above and below textareas
+3) Set font-size to match <body>'s, and font-family to sans-serif
+4) Align to baseline */
+button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-size: 100%; font-family: sans-serif; vertical-align: baseline; }
+
+/* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
+2) Align to text-top */
+textarea { overflow: auto; vertical-align:text-top; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+/* Remove extra padding and inner border in Firefox */
+input::-moz-focus-inner,
+button::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Colors for form validity */
+input:valid, textarea:valid { }
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+/* Bicubic resizing for non-native sized IMG:
+code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
-/* hidden elements */
-.hidden { display: none; visibility: hidden; } 
-.visuallyhidden { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
 
-/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
-   j.mp/bestclearfix */
-.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+/**
+* You might tweak these..
+*/
+
+body, select, input, textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+  color: #444;
+  /* Set your base font here, to apply evenly */
+  /* font-family: Georgia, serif; */
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+/* These selection declarations have to be separate
+No text-shadow: twitter.com/miketaylr/status/12228805301
+Also: hot pink! */
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/* Hide for both screenreaders and browsers:
+css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+www.webaim.org/techniques/css/invisiblecontent/ & j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations.
+nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
-/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 .clearfix { zoom: 1; }
+
+
 
 /******************************************************************
 COMMON & REUSABLE STYLES
