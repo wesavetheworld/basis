@@ -19,12 +19,16 @@
 	<head>
 		
 		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+         Remove this if its called in .htaccess or configured in Nginx -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		
 		<title><?php wp_title(' '); ?></title>
 		
 		<meta name="description" content="" />
 		<meta name="author" content="" />
 		
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<!-- reset and parent stylesheets -->
@@ -32,14 +36,6 @@
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/reset.css" />
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 		<!--<![endif]-->
-		
-		<!-- modernizr advanced CSS3 and HTML5 detection -->
-		<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/modernizr-1.7.min.js"></script>
-		
-		<!-- html5shim by Remy Sharp - http://remysharp.com/ -->
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 		
 		<!-- wordpress head functions -->
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -57,6 +53,9 @@
 		<!--[if lt IE 7]>
 		  <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
 		<![endif]-->
+		
+		<!-- modernizr advanced CSS3 and HTML5 detection -->
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/modernizr-1.7.min.js"></script>
 		
 	</head>
 	
