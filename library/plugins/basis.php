@@ -6,7 +6,7 @@
 * more "general" WordPress related features. A lot of this functionality comes
 * from the excellent work of Chris Coyier and Jeff Starr at http://digwp.com
 *
-* 1.) Add theme support for RSS Feeds & Post Thumbnails
+* 1.) Add theme support for RSS Feeds, Post Thumbnails & Post Formats
 * 2.) Remove junk from the head section
 * 3.) Remove version info from all pages and feeds
 * 4.) Insert favicon link the head section
@@ -23,6 +23,9 @@ add_theme_support('automatic-feed-links');
 
 // and enable post thumbnail support
 add_theme_support('post-thumbnails');
+
+// enable post format support
+add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
 // remove the junk from the head section
 function basis_remove_head_junk() {
