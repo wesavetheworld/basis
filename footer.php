@@ -8,7 +8,7 @@
 
 ?>
 
-			<footer role="contentinfo">
+			<footer class="clearfix" role="contentinfo">
 			
 				<div id="inner-footer">
 				  
