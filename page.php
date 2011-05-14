@@ -20,7 +20,7 @@ get_header(); ?>
   					<h2 class="page-title"><?php the_title(); ?></h2>
   				</header> <!-- end article header -->
 			
-  				<section class="post_content clearfix">
+  				<section class="post_content">
   					<?php the_content(); ?>
   				</section> <!-- end article section -->
 				

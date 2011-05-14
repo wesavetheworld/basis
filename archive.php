@@ -31,7 +31,7 @@ get_header(); ?>
 
         <article id="post-<?php the_ID(); ?>" class="clearfix">
 
-          <header>
+          <header class="clearfix">
   				  <div id="post-img">
               <?php if ( has_post_thumbnail() ) : ?>
                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
