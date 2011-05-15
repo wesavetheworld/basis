@@ -29,6 +29,12 @@
 * 
 */
 
+/* Load the admin.php file (library/admin/admin-menu.php)
+*  Creates the Basis Theme Framework admin page
+***********************************************************************************/
+include_once('library/admin/admin-menu.php');
+
+
 /* Load the core basis.php file (library/plugins/basis.php)
 *  This file contains general WordPress code to load core functionality
 ***********************************************************************************/
