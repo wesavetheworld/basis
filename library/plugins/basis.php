@@ -82,8 +82,7 @@ add_filter('body_class', 'category_id_class');
 function my_search_form($form) {
   $form = '<form role="search" method="get" id="searchform" action="'.home_url('/').'">
   <div>
-  <input type="text" value placeholder="Search this blog..." name="s" id="s" />
-  <input type="submit" id="searchsubmit" class="button" value="'.esc_attr__('Search').'" />
+  <input type="text" value placeholder="Search me..." name="s" id="s" />
   </div>
   </form>';
 
