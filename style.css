@@ -11,7 +11,7 @@ Tags: html5, framework, css3, development
 License: GPLv3
 
 This file contains only the most basic styling rules. It defines the classes for
-a fixed grid based layout based on the excelent work of Nathan Smith from
+a fixed grid layout based on the excelent work of Nathan Smith from
 http://960.gs. The grid width has been changed from 960px to 1020px to reflect
 the use of newer, more advanced monitors. I also removed the styling rules for
 a 16 column layout, deciding instead to stick with a 12 column layout only.
