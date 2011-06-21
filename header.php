@@ -44,28 +44,7 @@
   	} ?>
 	</title>
 	
-	<!-- reset and parent stylesheets -->
-	<!--[if (gt IE 6)|!(IE)]><!-->
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/reset.css" />
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
-	<!--<![endif]-->
-	
 	<?php wp_head(); ?>
-	
-	<!-- main stylesheet is called after wp_head() so you can overwrite plugin styles if needed -->
-	
-	<!-- Serve our child theme's default style.css to everyone except IE6 -->
-	<!--[if (gt IE 6)|!(IE)]><!-->
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
-	<!--<![endif]-->
-	
-	<!-- Serve the universal IE6 css from Google Code - http://forabeautifulweb.com/blog/about/universal_internet_explorer_6_css -->
-	<!--[if lt IE 7]>
-	  <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
-	<![endif]-->
-	
-	<!-- modernizr advanced CSS3 and HTML5 detection -->
-	<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/modernizr-1.7.min.js"></script>
 	
 </head>
 
