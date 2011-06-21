@@ -16,7 +16,6 @@
 <head>
   
   <!-- meta info -->
-  <meta charset="utf-8" />
   <meta charset="<?php bloginfo('charset'); ?>" />
 	<meta name="description" content="<?php bloginfo('description'); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
