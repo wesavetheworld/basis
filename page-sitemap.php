@@ -6,19 +6,19 @@ Template Name: Sitemap Page
 
 get_header(); ?>
 			
-	<div id="content" class="clearfix">
+	<div id="content">
 	
-		<div id="main" class="grid-8 clearfix" role="main">
+		<div id="main" role="main">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-  			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+  			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
   				<header>
   					<h2 class="page-title"><?php the_title(); ?></h2>
   				</header> <!-- end article header -->
 			
-  				<section class="post_content clearfix">
+  				<section class="post_content">
   					<?php the_content(); ?>
   					<?php get_template_part('library/partials/sitemap'); ?>
   				</section> <!-- end article section -->
@@ -35,16 +35,16 @@ get_header(); ?>
 			
   			<article id="post-not-found">
 			  
-  			    <header>
-  			    	<h2>Not Found</h2>
-  			    </header>
-			    
-  			    <section class="post_content">
-  			    	<p>Sorry, but the requested resource was not found on this site.</p>
-  			    </section>
-			    
-  			    <footer>
-  			    </footer>
+			    <header>
+			    	<h2>Not Found</h2>
+			    </header>
+		    
+			    <section class="post_content">
+			    	<p>Sorry, but the requested resource was not found on this site.</p>
+			    </section>
+		    
+			    <footer>
+			    </footer>
 			    
   			</article>
 			

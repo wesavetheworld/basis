@@ -28,7 +28,7 @@ function basis_comments($comment, $args, $depth) {
           		
 			<?php endif; ?>
 			
-			<section class="comment_content clearfix">
+			<section class="comment_content">
 				<?php comment_text() ?>
 			</section>
 

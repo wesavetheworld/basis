@@ -8,7 +8,7 @@
 
 ?>
 
-<div id="sidebar" class="sidebar grid-4 clearfix" role="complementary">
+<div id="sidebar" class="sidebar" role="complementary">
 
 	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('primary-sidebar')) : else : ?>
 

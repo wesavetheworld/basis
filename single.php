@@ -8,15 +8,15 @@
 
 get_header(); ?>
 			
-	<div id="content" class="clearfix">
+	<div id="content">
 	
-		<div id="main" class="grid-8 clearfix" role="main">
+		<div id="main" role="main">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-  			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+  			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
-  				<header class="clearfix">
+  				<header>
   				  <div id="post-img">
               <?php if ( has_post_thumbnail() ) : ?>
                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -45,7 +45,7 @@ get_header(); ?>
             
             <?php // If a user has filled out their description, show a bio on their entries
               if ( get_the_author_meta( 'description' ) ) { ?>
-							<div id="entry-author-info" class="clearfix">
+							<div id="entry-author-info">
   							<?php echo get_avatar( get_the_author_meta( 'user_email' ), 72 ); ?>
   							<h4><?php printf( esc_attr__( 'About %s' ), get_the_author() ); ?></h4>
   							<p><?php the_author_meta( 'description' ); ?></p>

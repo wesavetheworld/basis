@@ -8,11 +8,11 @@
 
 get_header(); ?>
 
-<div id="content" class="clearfix">
+<div id="content">
 
-  <div id="main" class="grid-8 clearfix" role="main">
+  <div id="main" role="main">
 
-    <article id="post-not-found" class="clearfix">
+    <article id="post-not-found">
 
       <header>
 

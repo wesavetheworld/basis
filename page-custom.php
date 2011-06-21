@@ -6,13 +6,13 @@ Template Name: Custom Page Example
 
 get_header(); ?>
 	
-	<div id="content" class="clearfix">
+	<div id="content">
 	
-		<div id="main" class="grid-8 clearfix" role="main">
+		<div id="main" role="main">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-			  <article id="post-<?php the_ID(); ?>" class="clearfix">
+			  <article id="post-<?php the_ID(); ?>">
 				
   				<header>
   					<h2><?php the_title(); ?></h2>
@@ -23,7 +23,7 @@ get_header(); ?>
   				</section> <!-- end article section -->
 			
   				<footer>
-  					<p class="clearfix"><?php the_tags('<span class="tags">Tags: ', ', ', '</span>'); ?></p>
+  					<p><?php the_tags('<span class="tags">Tags: ', ', ', '</span>'); ?></p>
   				</footer> <!-- end article footer -->
 			
   			</article> <!-- end article -->

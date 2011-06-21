@@ -8,15 +8,15 @@
 
 get_header(); ?>
 
-<div id="content" class="clearfix">
+<div id="content">
 
-  <div id="main" class="grid-8 clearfix" role="main">
+  <div id="main" role="main">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <header class="clearfix">
+      <header>
         <div id="post-img">
           <?php if ( has_post_thumbnail() ) : ?>
            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -56,7 +56,7 @@ get_header(); ?>
 
   <?php } else { // if it is disabled, display regular wp prev & next links ?>
     <nav class="wp-prev-next">
-      <ul class="clearfix">
+      <ul>
         <li class="prev-link"><?php next_posts_link('&laquo; Older Entries') ?></li>
         <li class="next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></li>
       </ul>

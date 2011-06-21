@@ -8,11 +8,11 @@
 
 ?>
 
-			<footer class="clearfix" role="contentinfo">
+			<footer role="contentinfo">
 			
 				<div id="inner-footer">
 				  
-				  <div id="footer-widget-1" class="grid-3" role="complementary">
+				  <div id="footer-widget-1" role="complementary">
 
             <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-1')) : else : ?>
 
@@ -26,7 +26,7 @@
           		
           </div><!-- End #footer-widget-1 -->
           		
-          <div id="footer-widget-2" class="grid-3" role="complementary">
+          <div id="footer-widget-2" role="complementary">
 
         	  <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-2')) : else : ?>
 
@@ -40,7 +40,7 @@
           	
           </div><!-- End #footer-widget-2 -->
           
-          <div id="footer-widget-3" class="grid-6" role="complementary">
+          <div id="footer-widget-3" role="complementary">
           		
         	  <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-3')) : else : ?>
 

@@ -25,7 +25,7 @@ if ( post_password_required() ) { ?>
     </h3>
 
     <nav id="comment-nav">
-      <ul class="clearfix">
+      <ul>
         <li><?php previous_comments_link() ?></li>
         <li><?php next_comments_link() ?></li>
       </ul>
@@ -36,7 +36,7 @@ if ( post_password_required() ) { ?>
     </ol>
 
     <nav id="comment-nav">
-      <ul class="clearfix">
+      <ul>
         <li><?php previous_comments_link() ?></li>
         <li><?php next_comments_link() ?></li>
       </ul>
@@ -78,7 +78,7 @@ if ( post_password_required() ) { ?>
 
           <?php else : ?>
 
-            <ul id="comment-form-elements" class="clearfix">
+            <ul id="comment-form-elements">
               <li>
                 <label for="author">Name <?php if ($req) echo "(required)"; ?></label><br />
                 <input type="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" placeholder="Your Name" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />

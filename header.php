@@ -49,7 +49,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="container" class="fixed-container">
+	<div id="container">
 		
 		<header role="banner">
 			<div id="inner-header">
