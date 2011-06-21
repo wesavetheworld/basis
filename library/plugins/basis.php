@@ -76,7 +76,7 @@ if (!is_admin()) {
  *
  */
 if (!is_admin()) {
-  wp_register_style('basis-reset-style', get_template_directory_uri().'/library/css/style.css');
+  wp_register_style('basis-reset-style', get_template_directory_uri().'/library/css/reset.css');
   wp_register_style('basis-default-style', get_template_directory_uri().'/style.css');
   wp_register_style('formalize-me', get_template_directory_uri().'/library/css/formalize.css');
   wp_enqueue_style('basis-reset-style');
