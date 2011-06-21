@@ -1,0 +1,118 @@
+/**
+This file defines the classes for a fixed grid layout based on the excelent
+work of Nathan Smith from http://960.gs. The grid width has been changed from
+960px to 1020px to reflect the use of newer, more advanced monitors. I also
+removed the styling rules for a 16 column layout, deciding instead to stick
+with a 12 column layout only. Using these classes in completely optional.
+They are included as one option for rapidly prototyping and styling your site.
+*/
+
+/* ============== */
+/* = Containers = */
+/* ============== */
+.fixed-container { margin: 0 auto; width: 1020px; }
+
+
+/* ================== */
+/* = Grid >> Global = */
+/* ================== */
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6,
+.grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
+	display: inline;
+	float: left;
+	position: relative;
+	margin: 0 10px;
+}
+
+.push-1, .pull-1, .push-2, .pull-2, .push-3, .pull-3,
+.push-4, .pull-4, .push-5, .pull-5, .push-6, .pull-6,
+.push-7, .pull-7, .push-8, .pull-8, .push-9, .pull-9,
+.push-10, .pull-10, .push-11, .pull-11, .push-12, .pull-12 { position: relative; }
+
+
+/* ================================================== */
+/* = Grid >> Children (Alpha ~ First, Omega ~ Last) = */
+/* ================================================== */
+.alpha { margin-left: 0; }
+.omega { margin-right: 0; }
+
+
+/* ====================== */
+/* = Grid >> 12 Columns = */
+/* ====================== */
+.fixed-container .grid-1  { width: 65px;   }
+.fixed-container .grid-2  { width: 150px;  }
+.fixed-container .grid-3  { width: 235px;  }
+.fixed-container .grid-4  { width: 320px;  }
+.fixed-container .grid-5  { width: 405px;  }
+.fixed-container .grid-6  { width: 490px;  }
+.fixed-container .grid-7  { width: 575px;  }
+.fixed-container .grid-8  { width: 660px;  }
+.fixed-container .grid-9  { width: 745px;  }
+.fixed-container .grid-10 { width: 830px;  }
+.fixed-container .grid-11 { width: 915px;  }
+.fixed-container .grid-12 { width: 1000px; }
+
+
+/* ==================================== */
+/* = Prefix Extra Space >> 12 Columns = */
+/* ==================================== */
+.fixed-container .prefix-1  { padding-left: 85px;  }
+.fixed-container .prefix-2  { padding-left: 170px; }
+.fixed-container .prefix-3  { padding-left: 255px; }
+.fixed-container .prefix-4  { padding-left: 340px; }
+.fixed-container .prefix-5  { padding-left: 425px; }
+.fixed-container .prefix-6  { padding-left: 510px; }
+.fixed-container .prefix-7  { padding-left: 595px; }
+.fixed-container .prefix-8  { padding-left: 680px; }
+.fixed-container .prefix-9  { padding-left: 765px; }
+.fixed-container .prefix-10 { padding-left: 850px; }
+.fixed-container .prefix-11 { padding-left: 935px; }
+
+
+/* ==================================== */
+/* = Suffix Extra Space >> 12 Columns = */
+/* ==================================== */
+.fixed-container .suffix-1  { padding-right: 85px;  }
+.fixed-container .suffix-2  { padding-right: 170px; }
+.fixed-container .suffix-3  { padding-right: 255px; }
+.fixed-container .suffix-4  { padding-right: 340px; }
+.fixed-container .suffix-5  { padding-right: 425px; }
+.fixed-container .suffix-6  { padding-right: 510px; }
+.fixed-container .suffix-7  { padding-right: 595px; }
+.fixed-container .suffix-8  { padding-right: 680px; }
+.fixed-container .suffix-9  { padding-right: 765px; }
+.fixed-container .suffix-10 { padding-right: 850px; }
+.fixed-container .suffix-11 { padding-right: 935px; }
+
+
+/* ============================ */
+/* = Push Space >> 12 Columns = */
+/* ============================ */
+.fixed-container .push-1  { left:85px;  }
+.fixed-container .push-2  { left:170px; }
+.fixed-container .push-3  { left:255px; }
+.fixed-container .push-4  { left:340px; }
+.fixed-container .push-5  { left:425px; }
+.fixed-container .push-6  { left:510px; }
+.fixed-container .push-7  { left:595px; }
+.fixed-container .push-8  { left:680px; }
+.fixed-container .push-9  { left:765px; }
+.fixed-container .push-10 { left:850px; }
+.fixed-container .push-11 { left:935px; }
+
+
+/* ============================ */
+/* = Pull Space >> 12 Columns = */
+/* ============================ */
+.fixed-container .pull-1  { left: -85px;  }
+.fixed-container .pull-2  { left: -170px; }
+.fixed-container .pull-3  { left: -255px; }
+.fixed-container .pull-4  { left: -340px; }
+.fixed-container .pull-5  { left: -425px; }
+.fixed-container .pull-6  { left: -510px; }
+.fixed-container .pull-7  { left: -595px; }
+.fixed-container .pull-8  { left: -680px; }
+.fixed-container .pull-9  { left: -765px; }
+.fixed-container .pull-10 { left: -850px; }
+.fixed-container .pull-11 { left: -935px; }
