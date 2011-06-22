@@ -40,7 +40,11 @@ get_header(); ?>
               <?php endif; ?>
             </div>
             <div id="post-preview">
-    					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+    					<h2>
+    					  <a href="<?php the_permalink() ?>"
+    					     rel="bookmark"
+    					     title="<?php the_title_attribute(); ?>"><?php edit_post_link('✍','',' '); the_title(); ?></a>
+    					</h2>
     					<p class="meta">
                 by <?php the_author_posts_link(); ?> on <time><?php the_time('F jS, Y'); ?></time><br />
                 in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>

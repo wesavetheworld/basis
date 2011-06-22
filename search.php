@@ -19,7 +19,11 @@ get_header(); ?>
   			<article id="post-<?php the_ID(); ?>">
 				
   				<header>
-  					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+  					<h2>
+  					  <a href="<?php the_permalink() ?>"
+  					     rel="bookmark"
+  					     title="<?php the_title_attribute(); ?>"><?php edit_post_link('✍','',' '); the_title(); ?></a>
+  					</h2>
   					<p class="meta">
               Posted on: <time><?php the_time('F jS, Y'); ?></time>
               by <?php the_author_posts_link(); ?>

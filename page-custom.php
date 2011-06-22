@@ -15,7 +15,7 @@ get_header(); ?>
 			  <article id="post-<?php the_ID(); ?>">
 				
   				<header>
-  					<h2><?php the_title(); ?></h2>
+  					<h2><?php edit_post_link('✍','',' '); the_title(); ?></h2>
   				</header> <!-- end article header -->
 		
   				<section class="post_content">
