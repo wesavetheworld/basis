@@ -13,10 +13,10 @@ function get_first_category_ID() {
 }
 
 // add a link to share a post on twitter (call using tweet_this();)
-function tweet_this() {
+function tweet_it() {
   echo '<a rel="nofollow"
         href="http://twitter.com/home?status=<?php echo urlencode("Currently reading: "); ?><?php the_permalink(); ?>"
-        title="Share this article with your Twitter followers">Tweet this!</a>';
+        title="Share this article with your Twitter followers">Tweet It!</a>';
 }
 
 // count words in posts (call using word_count();)
