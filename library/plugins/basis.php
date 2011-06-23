@@ -76,8 +76,8 @@ if (!is_admin()) {
  *
  */
 if (!is_admin()) {
-  wp_register_style('basis-reset-style', get_template_directory_uri().'/library/css/reset.css');
-  wp_enqueue_style('basis-reset-style');
+  wp_register_style('basis-reset', get_template_directory_uri().'/library/css/reset.css');
+  wp_enqueue_style('basis-reset');
 }
 
 
