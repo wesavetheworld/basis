@@ -25,7 +25,8 @@ get_header(); ?>
               <?php endif; ?>
             </div>
             <div id="post-preview">
-    					<h2><?php edit_post_link('✍','',' '); the_title(); ?></h2>
+              <?php edit_post_link('✍','',' '); ?>
+    					<h2><?php the_title(); ?></h2>
     					<p class="meta">
                 by <?php the_author_posts_link(); ?> on <time><?php the_time('F jS, Y'); ?></time><br />
                 in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>

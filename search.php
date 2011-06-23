@@ -20,9 +20,10 @@ get_header(); ?>
 				
   				<header>
   					<h2>
+  					  <?php edit_post_link('✍','',' '); ?>
   					  <a href="<?php the_permalink() ?>"
   					     rel="bookmark"
-  					     title="<?php the_title_attribute(); ?>"><?php edit_post_link('✍','',' '); the_title(); ?></a>
+  					     title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
   					</h2>
   					<p class="meta">
               Posted on: <time><?php the_time('F jS, Y'); ?></time>
