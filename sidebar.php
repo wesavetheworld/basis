@@ -30,4 +30,4 @@
     
   <?php endif; ?>
 
-</div>
+</div> <!-- end sidebar -->
