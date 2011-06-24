@@ -52,11 +52,6 @@ include_once('library/plugins/extras.php');
 ***********************************************************************************/
 include_once('library/plugins/pagenavi.php');
 
-/* Load the custom-header.php file (library/plugins/custom-header.php)
-*  Setup and call all necessary functions to add custom headers
-***********************************************************************************/
-//include_once('library/plugins/custom-header.php');
-
 
 /* Load the comments.php file (library/plugins/comments.php)
 *  This file contains the the custom callback function for the comments loop
@@ -64,10 +59,10 @@ include_once('library/plugins/pagenavi.php');
 include_once('library/plugins/comments.php');
 
 
-/* Load the randomposts.php file (library/plugins/randomposts.php)
-*  This file contains the the custom code to create a random posts widget
+/* Load the custom-header.php file (library/plugins/custom-header.php)
+*  Setup and call all necessary functions to add custom headers
 ***********************************************************************************/
-include_once('library/plugins/randomposts.php');
+//include_once('library/plugins/custom-header.php');
 
 
 /* Load the custom-post-type.php file (library/plugins/custom-post-type.php)
