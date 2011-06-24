@@ -12,78 +12,78 @@ get_header(); ?>
 
   <div id="main" role="main">
 
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <header>
-        <div id="post-img">
-          <?php if ( has_post_thumbnail() ) : ?>
-           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-           <?php the_post_thumbnail('thumbnail'); ?>
-           </a>
+        <header>
+          <div id="post-img">
+            <?php if ( has_post_thumbnail() ) : ?>
+             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+             <?php the_post_thumbnail('thumbnail'); ?>
+             </a>
+            <?php endif; ?>
+          </div>
+          <div id="post-preview">
+            <h2>
+              <?php edit_post_link('✍','',' '); ?>
+              <a href="<?php the_permalink() ?>"
+                 rel="bookmark"
+                 title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+            </h2>
+            <p class="meta">
+              Posted on: <time><?php the_time('F jS, Y'); ?></time>
+              by <?php the_author_posts_link(); ?>
+              categorized: <?php the_category(', '); ?>
+            </p>
+          </div>
+        </header> <!-- end article header -->
+
+        <section class="post_content">
+          <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
+        </section> <!-- end article section -->
+
+        <footer>
+          <?php if (has_tag()) : ?>
+            <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+          <?php else : ?>
+            <p class="tags">Tags: [this post has not been tagged]</p>
           <?php endif; ?>
-        </div>
-        <div id="post-preview">
-          <h2>
-            <?php edit_post_link('✍','',' '); ?>
-            <a href="<?php the_permalink() ?>"
-               rel="bookmark"
-               title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-          </h2>
-          <p class="meta">
-            Posted on: <time><?php the_time('F jS, Y'); ?></time>
-            by <?php the_author_posts_link(); ?>
-            categorized: <?php the_category(', '); ?>
-          </p>
-        </div>
-      </header> <!-- end article header -->
+        </footer> <!-- end article footer -->
 
-      <section class="post_content">
-        <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
-      </section> <!-- end article section -->
+      </article> <!-- end article -->
 
-      <footer>
-        <?php if (has_tag()) : ?>
-          <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
-        <?php else : ?>
-          <p class="tags">Tags: [this post has not been tagged]</p>
-        <?php endif; ?>
-      </footer> <!-- end article footer -->
+    <?php endwhile; ?>	
 
-    </article> <!-- end article -->
+    <?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
 
-<?php endwhile; ?>	
+      <?php page_navi(); // use the page navi function ?>
 
-<?php if (function_exists('page_navi')) { // if expirimental feature is active ?>
-
-  <?php page_navi(); // use the page navi function ?>
-
-  <?php } else { // if it is disabled, display regular wp prev & next links ?>
-    <nav class="wp-prev-next">
-      <ul>
-        <li class="prev-link"><?php next_posts_link('&laquo; Older Entries') ?></li>
-        <li class="next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></li>
-      </ul>
-    </nav>
+    <?php } else { // if it is disabled, display regular wp prev & next links ?>
+      <nav class="wp-prev-next">
+        <ul>
+          <li class="prev-link"><?php next_posts_link('&laquo; Older Entries') ?></li>
+          <li class="next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></li>
+        </ul>
+      </nav>
     <?php } ?>		
 
-<?php else : ?>
+    <?php else : ?>
 
-  <article id="post-not-found">
-    <header>
-      <h2>Not Found</h2>
-    </header>
-    <section class="post_content">
-      <p>Sorry, but the requested resource was not found on this site.</p>
-    </section>
-    <footer>
-    </footer>
-  </article>
+      <article id="post-not-found">
+        <header>
+          <h2>Not Found</h2>
+        </header>
+        <section class="post_content">
+          <p>Sorry, but the requested resource was not found on this site.</p>
+        </section>
+        <footer>
+        </footer>
+      </article>
 
-<?php endif; ?>
+    <?php endif; ?>
 
-</div> <!-- end #main -->
+  </div> <!-- end #main -->
 
 <?php get_sidebar(); // sidebar 1 ?>
 
