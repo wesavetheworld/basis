@@ -34,7 +34,7 @@
   		echo 'Search for &quot;'.wp_specialchars($s).'&quot; | '; bloginfo('name');
   	} elseif (is_home()) {
   		bloginfo('name'); echo ' | '; bloginfo('description');
-  	}  elseif (is_404()) {
+  	} elseif (is_404()) {
   		echo 'Error 404 Not Found | '; bloginfo('name');
   	} elseif (is_single()) {
   		wp_title('');
@@ -49,7 +49,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="container">
+	<div id="page-wrap">
 		
 		<header role="banner">
 			<div id="inner-header">
@@ -66,4 +66,4 @@
 				  basis_primary_menu();
 				?>
 			</div>
-		</nav>
+		</nav> <!-- end navigation -->
