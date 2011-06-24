@@ -23,7 +23,7 @@ get_header(); ?>
       <section class="post_content">
 
         <p>The article you were looking for was not found, the following sitemap might help you find what you're looking for.</p>
-				<?php get_template_part('library/partials/sitemap'); ?>
+				<?php get_template_part('sitemap'); ?>
 
       </section> <!-- end article section -->
 

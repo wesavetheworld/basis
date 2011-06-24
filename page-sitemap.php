@@ -20,7 +20,7 @@ get_header(); ?>
 		
 				<section class="post_content">
 					<?php the_content(); ?>
-					<?php get_template_part('library/partials/sitemap'); ?>
+					<?php get_template_part('sitemap'); ?>
 				</section> <!-- end article section -->
 			
 				<footer>
