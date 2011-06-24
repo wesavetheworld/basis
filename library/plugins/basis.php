@@ -49,20 +49,13 @@ function remove_head_junk() {
  *
  * Dynamically include JavaScript files
  *
- * jQuery
  * Modernizr
- * Plugins
  * Threaded Comments
  *
  */
 if (!is_admin()) {
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"));
 	wp_register_script('modernizr', get_template_directory_uri().'/library/js/modernizr-2.0.4.js');
-	wp_register_script('plugins', get_template_directory_uri().'/library/js/plugins.js');
-	wp_enqueue_script('jquery', true);
 	wp_enqueue_script('modernizr');
-	wp_enqueue_script('plugins', true);
 	if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1))
 		wp_enqueue_script('comment-reply');
 }
@@ -123,7 +116,8 @@ function basis_search_form($form) {
 }
 
 function  basis_admin_footer_text() {
-	echo 'Theme designed by <a href="http://utadvisors.com">Universal Technology Advisors</a> using the Basis Theme Framework';
+	echo 'Theme designed by <a href="http://utadvisors.com">Universal Technology Advisors</a> 
+	      using the <a href="https://github.com/humanshell/Basis">Basis Theme Framework</a>';
 }
 
 function wp_fuzzy_time() {
