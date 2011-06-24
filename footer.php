@@ -10,7 +10,7 @@
 
 		<footer role="contentinfo">
 		
-			<div id="inner-footer">
+			<div id="inner-footer" class="clearfix">
 			  
 			  <div id="footer-widget-1" role="complementary">
 

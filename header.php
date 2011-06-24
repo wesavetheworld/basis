@@ -52,7 +52,7 @@
 	<div id="page-wrap">
 		
 		<header role="banner">
-			<div id="inner-header">
+			<div id="inner-header" class="clearfix">
 				<h1 id="logo"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
 				<p id="description"><?php bloginfo('description'); ?></p>
 				<div id="custom-header-img"></div>

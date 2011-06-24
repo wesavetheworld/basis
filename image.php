@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div id="content">
+<div id="content" class="clearfix">
 
   <div id="main">
 
@@ -30,7 +30,7 @@ get_header(); ?>
       </section>
 
       <footer>
-        <nav class="prev-next-links">
+        <nav class="prev-next-links clearfix">
           <ul>
             <li><?php previous_image_link() ?></li>
             <li><?php next_image_link() ?></li>

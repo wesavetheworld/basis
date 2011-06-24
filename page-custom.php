@@ -6,7 +6,7 @@ Template Name: Custom Page Example
 
 get_header(); ?>
 	
-<div id="content">
+<div id="content" class="clearfix">
 
 	<div id="main" role="main">
 

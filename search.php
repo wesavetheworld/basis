@@ -8,7 +8,7 @@
 
 get_header(); ?>
 			
-<div id="content">
+<div id="content" class="clearfix">
 
 	<div id="main" role="main">
 	
@@ -18,7 +18,7 @@ get_header(); ?>
 		
 			<article id="post-<?php the_ID(); ?>">
 			
-				<header>
+				<header class="clearfix">
 					<h2>
 					  <?php edit_post_link('✍','',' '); ?>
 					  <a href="<?php the_permalink() ?>"
@@ -55,7 +55,7 @@ get_header(); ?>
 			
 		<?php } else { // if it is disabled, display regular wp prev & next links ?>
 		  
-			<nav class="wp-prev-next">
+			<nav class="wp-prev-next clearfix">
 				<ul>
 					<li class="prev-link"><?php next_posts_link('&laquo; Older Entries') ?></li>
 					<li class="next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></li>

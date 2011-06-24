@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div id="content">
+<div id="content" class="clearfix">
 
   <div id="main" role="main">
 
@@ -31,7 +31,7 @@ get_header(); ?>
 
       <article id="post-<?php the_ID(); ?>">
 
-        <header>
+        <header class="clearfix">
 				  <div id="post-img">
             <?php if ( has_post_thumbnail() ) : ?>
              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -73,7 +73,7 @@ get_header(); ?>
       <?php page_navi(); // use the page navi function ?>
 
     <?php } else { // if it is disabled, display regular wp prev & next links ?>
-      <nav class="wp-prev-next">
+      <nav class="wp-prev-next clearfix">
         <ul>
           <li class="prev-link"><?php next_posts_link('&laquo; Older Entries') ?></li>
           <li class="next-link"><?php previous_posts_link('Newer Entries &raquo;') ?></li>

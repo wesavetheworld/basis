@@ -8,7 +8,7 @@
 
 get_header(); ?>
 			
-<div id="content">
+<div id="content" class="clearfix">
 
 	<div id="main" role="main">
 
@@ -16,7 +16,7 @@ get_header(); ?>
 		
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
-				<header>
+				<header class="clearfix">
 				  <div id="post-img">
             <?php if ( has_post_thumbnail() ) : ?>
              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -79,8 +79,6 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</div> <!-- end #main -->
-
-	<?php get_sidebar(); // sidebar 1 ?>
 
 </div> <!-- end #content -->
 
