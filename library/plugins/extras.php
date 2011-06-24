@@ -61,8 +61,8 @@ function basis_related_posts() {
 }
 
 // facebook share correct image fix (thanks to yoast)
-// original code by Eddie Machado for the Bones Theme Template
-function bones_facebook_connect() {
+// original code by Eddie Machado and Joost de Valk for the Bones Theme Template
+function basis_facebook_connect() {
 	if (is_singular()) {
 	  global $post;
 	  if ( current_theme_supports('post-thumbnails') 
@@ -77,6 +77,6 @@ function bones_facebook_connect() {
 	    echo '<meta property="og:description" content="'.strip_tags( get_the_excerpt() ).'" />';
 	}
 }
-add_action('wp_head', 'bones_facebook_connect');
+add_action('wp_head', 'basis_facebook_connect');
 
 ?>
