@@ -12,7 +12,7 @@ get_header(); ?>
 
   <div id="main" role="main">
 
-    <article id="post-not-found">
+    <article id="post-not-found" <?php post_class(); ?>>
 
       <header>
 
