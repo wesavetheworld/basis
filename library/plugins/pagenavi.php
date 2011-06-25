@@ -46,29 +46,29 @@ function page_navi($before = '', $after = '') {
 		$start_page = 1;
 	}
 
-	echo $before.'<div class="page-navigation"><ul class="bones_page_navi clearfix">'."";
+	echo $before.'<div class="basis-pagenavi clearfix">'."";
 	if ($start_page >= 2 && $pages_to_show < $max_page) {
 		$first_page_text = "First";
-		echo '<li class="bpn-first-page-link"><a href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a></li>';
+		echo '<a class="bpn-first-page-link" href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a>';
 	}
-	echo '<li class="bpn-prev-link">';
-	previous_posts_link('<<');
-	echo '</li>';
-	for($i = $start_page; $i  <= $end_page; $i++) {
+	echo '<a class="bpn-prev-link">';
+	previous_posts_link('&laquo;');
+	echo '</a>';
+	for($i = $start_page; $i<=$end_page; $i++) {
 		if($i == $paged) {
-			echo '<li class="bpn-current">'.$i.'</li>';
+			echo '<span class="bpn-current">'.$i.'</span>';
 		} else {
-			echo '<li><a href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
+			echo '<a href="'.get_pagenum_link($i).'">'.$i.'</a>';
 		}
 	}
-	echo '<li class="bpn-next-link">';
-	next_posts_link('>>');
-	echo '</li>';
+	echo '<a class="bpn-next-link">';
+	next_posts_link('&raquo;');
+	echo '</a>';
 	if ($end_page < $max_page) {
 		$last_page_text = "Last";
-		echo '<li class="bpn-last-page-link"><a href="'.get_pagenum_link($max_page).'" title="'.$last_page_text.'">'.$last_page_text.'</a></li>';
+		echo '<a class="bpn-last-page-link" href="'.get_pagenum_link($max_page).'" title="'.$last_page_text.'">'.$last_page_text.'</a>';
 	}
-	echo '</ul></div>'.$after."";
+	echo '</div> <!-- end .basis-pagenavi -->'.$after."";
 }
 
 ?>
