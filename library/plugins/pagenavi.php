@@ -4,9 +4,8 @@
 * 
 * Built in Page Navi w/out Plugin
 * 
-* This feature is meant to add page navi functionality w/out
-* using a plugin. It's currently in use but does contain a few
-* bugs. Mainly it displays something even if there's only one page.
+* This feature is meant to add page navi functionality w/out using
+* a plugin. It's currently in use but does contain a few bugs.
 * 
 * THIS FEATURE IS IN DEVELOPMENT BUT FUNCTIONAL
 *
