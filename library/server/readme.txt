@@ -9,6 +9,7 @@ This file outlines the steps necessary to prepare your site/theme to go live
 
 2b.) If running Nginx:
  - move nginx.conf to /etc/nginx/ on your server (or wherever your server config files reside)
+ - move nginx-mime.types to /etc/nginx/mime.types on your server (or wherever your server config files reside)
  - move default.sites-available to /etc/nginx/sites-available/default on your server (or wherever your server config files reside)
 
 3.) move robots.txt to /
