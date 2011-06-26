@@ -131,7 +131,7 @@ function wp_fuzzy_time() {
   $yearInSecs     = $dayInSecs * 366;
     
 	if ($timeDifference > ($yearInSecs * 3))       // if over 3 years
-		$dateWithNiceTone = "quite a long while ago…";
+		$dateWithNiceTone = "quite a long time ago…";
 	else if ($timeDifference > ($yearInSecs * 2))  // if over 2 years
 		$dateWithNiceTone = "over two years ago";
 	else if ($timeDifference > $yearInSecs)        // if over a year 
