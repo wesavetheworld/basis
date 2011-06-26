@@ -4,6 +4,15 @@
 *
 * This is the default header for the Basis parent theme
 *
+* The majority of what you would usually see in the <head> section of a theme
+* has been moved to /library/plugins/basis.php. All of the CSS and all of the JavaScript
+* are loaded dynamically from there using wp_enqueue_style() and wp_enqueue_script().
+* The favicon and rss feeds are loaded from there as well.
+*
+* This header file is mainly responsible for setting the proper <html> attributes and
+* and classes to make hooking into older browser easier from CSS. It also writes out
+* a nice title if you're not using an SEO plugin.
+*
 */
 
 ?>
