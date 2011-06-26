@@ -1,14 +1,17 @@
-This file outlines the steps that need to be taken to prepare this site/theme to go live
+This file outlines the steps necessary to prepare your site/theme to go live
 
-WordPress Database:
-1.) Change siteurl in wp_options table to new domain
-2.) Change home in wp_options table to new domain
+1.) If you are moving a development theme from a local environment to a live server:
+ - Change siteurl in wp_options database table to new domain
+ - Change home in wp_options database table to new domain
+ - Double check all links to make sure they point to new domain
 
-WordPress Theme:
-1.) Move .htaccess to / and paste in 5GFirewall.txt rules
-2.) Move any favicon.ico to library/images/
-3.) Update Google Custom Search info on site and on Google to reflect new domain
-4.) Double check all links to make sure they point to new domain
-5.) Move robots.txt to /
-6.) Create sitemap.xml in /
-7.) 
+2a.) If running Apache, move the entire htaccess file to /.htaccess
+
+2b.) If running Nginx:
+ - move nginx.conf to /etc/nginx/ on your server (or wherever your server config files reside)
+ - move default.sites-available to /etc/nginx/sites-available/default on your server (or wherever your server config files reside)
+
+3.) move robots.txt to /
+ - This is an example robots structure using best practices outlined by Jeff Starr
+ - http://perishablepress.com/wordpress-robots-rules/
+
