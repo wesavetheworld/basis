@@ -1,6 +1,6 @@
 # /etc/nginx/sites-available/default
 
-server{
+server {
 	listen 80 default deferred; # for Linux
   # listen 80 default accept_filter=httpready; # for FreeBSD
   # listen 80 default;
@@ -18,7 +18,7 @@ server{
 	root /var/www;
 	
 	# Custom 404 page
-  error_page 404 /404.html;
+  #error_page 404 /404.html;
   
   # This is a pretty long expiry and assumes you're using
   # cachebusting with query params like
@@ -30,14 +30,14 @@ server{
   expires 1M; # yes one month
   
   # Static assets
-  location ~* ^.+\.(manifest|appcache)${
+  location ~* ^.+\.(manifest|appcache)$ {
     expires -1;
     root /var/www; # <- public site root
     access_log /var/log/nginx/$host-static.log;
   }
   
   # Set expires max on static file types
-  location ~* ^.+\.(css|js|jpg|jpeg|gif|png|ico|gz|svg|svgz|ttf|otf|woff|eot|mp4|ogg|ogv|webm)${
+  location ~* ^.+\.(css|js|jpg|jpeg|gif|png|ico|gz|svg|svgz|ttf|otf|woff|eot|mp4|ogg|ogv|webm)$ {
     expires max;
     root /var/www; # <- public site root
     access_log off;
@@ -47,18 +47,18 @@ server{
   if ($request_uri ~* ^.*(\.svn|\.git|\.cvs).*$) { return 404; }
   
   # WordPress Rewrites
-  if ($http_user_agent !~ FeedBurner){
-   rewrite ^/comment/feed/ http://feeds.feedburner.com/your-comment-feed last;
-   rewrite ^/feed/ http://feeds.feedburner.com/your-feed last;
-  }
+  #if ($http_user_agent !~ FeedBurner) {
+  # rewrite ^/comment/feed/ http://feeds.feedburner.com/your-comment-feed last;
+  # rewrite ^/feed/ http://feeds.feedburner.com/your-feed last;
+  #}
 
-  if (!-e $request_filename){
-   rewrite login$ http://$host/wp-login.php;
+  if (!-e $request_filename) {
+   rewrite login$ http://$host/wp-login.php; # creates a pretty WordPress login URL: example.com/login
    rewrite ^.*$ /index.php last;
   }
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
-	location ~ \.php${
+	location ~ \.php$ {
 	  # prevent malicious attacks from malformed files containing php code
 	  # https://nealpoole.com/blog/2011/04/setting-up-php-fastcgi-and-nginx-dont-trust-the-tutorials-check-your-configuration/
 		try_files $uri =400;
@@ -70,4 +70,5 @@ server{
 	
 	# Use ChromeFrame for the poor IE folk
   add_header "X-UA-Compatible" "IE=Edge,chrome=1";
+  
 }
