@@ -47,13 +47,14 @@ function remove_head_junk() {
 
 /**
  *
- * Dynamically include JavaScript files
+ * basis_scripts() - Dynamically include JavaScript files
  *
  * Modernizr
  * Threaded Comments
  *
  */
-if (!is_admin()) {
+add_action('template_redirect', 'basis_scripts');
+function basis_scripts() {
 	wp_register_script('modernizr', get_template_directory_uri().'/library/js/modernizr-2.0.4.js');
 	wp_enqueue_script('modernizr');
 	if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1))
@@ -63,12 +64,13 @@ if (!is_admin()) {
 
 /**
  *
- * Dynamically include reset stylesheet in the head
+ * basis_styles() - Dynamically include reset stylesheet in the head
  *
  * default style.css
  *
  */
-if (!is_admin()) {
+add_action('wp_print_styles', 'basis_styles');
+function basis_styles() {
   wp_register_style('basis-reset', get_template_directory_uri().'/library/css/reset.css');
   wp_enqueue_style('basis-reset');
 }
@@ -93,9 +95,9 @@ add_filter('admin_footer_text', 'basis_admin_footer_text');
 add_filter('Posts', 'wp_fuzzy_time');
 
 function basis_favicon() {
-    echo '<link rel="shortcut icon" type="image/x-icon" href="';
-    echo bloginfo('stylesheet_directory');
-    echo '/library/images/favicon.ico" />';
+  echo '<link rel="shortcut icon" type="image/x-icon" href="';
+  echo bloginfo('stylesheet_directory');
+  echo '/library/images/favicon.ico" />';
 }
 
 function category_id_class($classes) {
