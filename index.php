@@ -32,7 +32,7 @@ get_header(); ?>
                  title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
             </h2>
             <p class="meta">
-              Posted on: <time><?php the_time('F jS, Y'); ?></time>
+              Posted <time><?php wp_fuzzy_time(); ?></time>
               by <?php the_author_posts_link(); ?>
               categorized: <?php the_category(', '); ?>
             </p>

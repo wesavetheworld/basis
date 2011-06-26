@@ -47,7 +47,7 @@ get_header(); ?>
   					     title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
   					</h2>
   					<p class="meta">
-              by <?php the_author_posts_link(); ?> on <time><?php the_time('F jS, Y'); ?></time><br />
+              by <?php the_author_posts_link(); ?> <time><?php wp_fuzzy_time(); ?></time><br />
               in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>
           </div>
 				</header> <!-- end article header -->
