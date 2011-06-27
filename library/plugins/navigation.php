@@ -82,16 +82,16 @@ function basis_sidebars() {
       'id'            => "primary-sidebar",
       'before_widget' => '<li id="%1$s" class="sidebar-widget %2$s">',
       'after_widget'  => '</li>',
-      'before_title'  => '<h2 class="h3 sidebar-widgettitle">',
-      'after_title'   => '</h2>'));
+      'before_title'  => '<h4 class="sidebar-widgettitle">',
+      'after_title'   => '</h4>'));
       
     register_sidebar(array(
     	'name'          => __('Secondary Sidebar'),
       'id'            => "secondary-sidebar",
       'before_widget' => '<li id="%1$s" class="sidebar-widget %2$s">',
       'after_widget'  => '</li>',
-      'before_title'  => '<h2 class="h3 sidebar-widgettitle">',
-      'after_title'   => '</h2>'));
+      'before_title'  => '<h4 class="sidebar-widgettitle">',
+      'after_title'   => '</h4>'));
   }
 }
 add_action('widgets_init', 'basis_sidebars');
