@@ -24,7 +24,7 @@ get_header(); ?>
              </a>
             <?php endif; ?>
           </div>
-          <div class="post-preview">
+          <div class="post-info">
             <h2>
               <?php edit_post_link('✍','',' '); ?>
               <a href="<?php the_permalink() ?>"

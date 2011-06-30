@@ -24,7 +24,7 @@ get_header(); ?>
              </a>
             <?php endif; ?>
           </div>
-          <div class="post-preview">
+          <div class="post-info">
   					<h2><?php edit_post_link('✍','',' '); ?><?php the_title(); ?></h2>
   					<p class="meta">
               by <?php the_author_posts_link(); ?> <time><?php wp_fuzzy_time(); ?></time><br />
