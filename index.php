@@ -17,14 +17,14 @@ get_header(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header class="clearfix">
-          <div id="post-img">
+          <div class="post-img">
             <?php if ( has_post_thumbnail() ) : ?>
              <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
              <?php the_post_thumbnail('thumbnail'); ?>
              </a>
             <?php endif; ?>
           </div>
-          <div id="post-preview">
+          <div class="post-preview">
             <h2>
               <?php edit_post_link('✍','',' '); ?>
               <a href="<?php the_permalink() ?>"
