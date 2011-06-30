@@ -43,9 +43,11 @@ function basis_primary_menu() {
   if ( function_exists('wp_nav_menu') ) {
     // call the WP3.0 menu
     wp_nav_menu(array(
-      'theme_location' => 'primary_menu',
-      'container_id'   => 'primary-menu',
-      'fallback_cb'    => 'basis_menu_fallback'));
+      'theme_location'  => 'primary_menu',
+      'container_id'    => 'primary-menu',
+      'container_class' => 'menu',
+      'menu_class'      => 'clearfix',
+      'fallback_cb'     => 'basis_menu_fallback'));
   } else {
     // fallback if not supported
     basis_menu_fallback();
@@ -56,9 +58,11 @@ function basis_primary_menu() {
 function basis_secondary_menu() {
   if ( function_exists('wp_nav_menu') ) {
     wp_nav_menu(array(
-      'theme_location' => 'secondary_menu',
-      'container_id'   => 'secondary-menu',
-      'fallback_cb'    => 'basis_menu_fallback'));
+      'theme_location'  => 'secondary_menu',
+      'container_id'    => 'secondary-menu',
+      'container_class' => 'menu',
+      'menu_class'      => 'clearfix',
+      'fallback_cb'     => 'basis_menu_fallback'));
   } else {
     // fallback if not supported
     basis_menu_fallback();
