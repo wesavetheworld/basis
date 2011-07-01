@@ -60,7 +60,7 @@ if ( post_password_required() ) { ?>
 
     <section id="respond">
 
-      <h3 id="comment-form-title" class="h2"><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>
+      <h3 id="comment-form-title" class="h2"><?php comment_form_title( 'Discuss', 'Discuss %s' ); ?></h3>
 
       <div id="cancel-comment-reply">
         <p class="small"><?php cancel_comment_reply_link(); ?></p>
@@ -102,7 +102,7 @@ if ( post_password_required() ) { ?>
           <?php comment_id_fields(); ?>
         </p>
 
-        <p id="allowed_tags"><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
+        <p id="allowed_tags" class="info"><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></p>
 
       <?php do_action('comment_form', $post->ID); ?>
 
