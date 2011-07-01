@@ -16,29 +16,27 @@ get_header(); ?>
 		
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
-				<header class="clearfix">
-				  <div class="post-img">
-            <?php if ( has_post_thumbnail() ) : ?>
-             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-             <?php the_post_thumbnail('thumbnail'); ?>
-             </a>
-            <?php endif; ?>
-          </div>
-          <div class="post-info">
-  					<h2><?php edit_post_link('✍','',' '); ?><?php the_title(); ?></h2>
-  					<p class="meta">
-              by <?php the_author_posts_link(); ?> <time><?php wp_fuzzy_time(); ?></time><br />
-              in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>
-          </div>
+				<header>
+					<h2 class="h1"><?php edit_post_link('✍','',' '); ?><?php the_title(); ?></h2>
+					<p class="meta">
+            the following <?php word_count(); ?> words were written by <?php the_author_posts_link(); ?><br />
+            <?php wp_fuzzy_time(); ?> (<?php the_date(); ?> at <?php the_time(); ?>)
+          </p>
 				</header> <!-- end article header -->
 		
-				<section class="post_content">
+				<section class="post_content clearfix">
+				  <?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnail', array('class' => 'left')); } ?>
 					<?php the_content(); ?>
 				</section> <!-- end article section -->
 			
 				<footer>
+          <?php if (has_category()) : ?>
+            <p class="cats">Categories: <?php the_category(', '); ?></p>
+          <?php else : ?>
+            <p class="cats">Categories: [this post has no categories]</p>
+          <?php endif; ?>
           <?php if (has_tag()) : ?>
-            <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+            <p class="tags">Tags: <?php the_tags(', '); ?></p>
           <?php else : ?>
             <p class="tags">Tags: [this post has not been tagged]</p>
           <?php endif; ?>

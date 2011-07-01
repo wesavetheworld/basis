@@ -17,35 +17,34 @@ get_header(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header class="clearfix">
-          <div class="post-img">
-            <?php if ( has_post_thumbnail() ) : ?>
-             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-             <?php the_post_thumbnail('thumbnail'); ?>
-             </a>
-            <?php endif; ?>
-          </div>
-          <div class="post-info">
-            <h2>
-              <?php edit_post_link('✍','',' '); ?>
-              <a href="<?php the_permalink() ?>"
-                 rel="bookmark"
-                 title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-            </h2>
-            <p class="meta">
-              Posted <time><?php wp_fuzzy_time(); ?></time>
-              by <?php the_author_posts_link(); ?>
-              categorized: <?php the_category(', '); ?>
-            </p>
-          </div>
+          <h2>
+            <?php edit_post_link('✍','',' '); ?>
+            <a href="<?php the_permalink() ?>"
+               rel="bookmark"
+               title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+          </h2>
+          <p class="meta">
+            Posted by <?php the_author_posts_link(); ?> <?php wp_fuzzy_time(); ?>
+          </p>
         </header> <!-- end article header -->
 
         <section class="post_content">
+          <?php if ( has_post_thumbnail() ) : ?>
+           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+            <?php the_post_thumbnail('thumbnail', array('class' => 'left')); ?>
+           </a>
+          <?php endif; ?>
           <?php the_content('<span class="read-more">Read more on "'.the_title('', '', false).'" &raquo;</span>'); ?>
         </section> <!-- end article section -->
 
         <footer>
+          <?php if (has_category()) : ?>
+            <p class="cats">Categories: <?php the_category(', '); ?></p>
+          <?php else : ?>
+            <p class="cats">Categories: [this post has no categories]</p>
+          <?php endif; ?>
           <?php if (has_tag()) : ?>
-            <p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
+            <p class="tags">Tags: <?php the_tags(', '); ?></p>
           <?php else : ?>
             <p class="tags">Tags: [this post has not been tagged]</p>
           <?php endif; ?>
