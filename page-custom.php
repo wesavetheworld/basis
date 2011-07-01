@@ -23,10 +23,6 @@ get_header(); ?>
 					<?php the_content(); ?>
 				</section> <!-- end article section -->
 		
-				<footer>
-					<p><?php the_tags('<span class="tags">Tags: ', ', ', '</span>'); ?></p>
-				</footer> <!-- end article footer -->
-		
 			</article> <!-- end article -->
 		
 		<?php endwhile; ?>	

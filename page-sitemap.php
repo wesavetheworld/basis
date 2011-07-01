@@ -22,10 +22,6 @@ get_header(); ?>
 					<?php the_content(); ?>
 					<?php get_template_part('sitemap'); ?>
 				</section> <!-- end article section -->
-			
-				<footer>
-					<p class="tags"><?php the_tags('<span class="tags-title">Tags:</span> ', ', ', ''); ?></p>
-				</footer> <!-- end article footer -->
 		
 			</article> <!-- end article -->
 					
