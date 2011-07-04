@@ -157,7 +157,7 @@ function wp_fuzzy_time() {
   else if ($timeDifference >= ($dayInSecs * 2))  // if equal to or more than 2 days ago
     $dateWithNiceTone = "a couple of days ago";   
 	else if ($timeDifference > $hourInSecs)        // if more than an hour ago
-		$dateWithNiceTone = "freshly baked";
+		$dateWithNiceTone = "a few hours ago";
 	else if ($timeDifference <= $hourInSecs)       // if less than or equal to an hour ago
 		$dateWithNiceTone = "just now";
 		
