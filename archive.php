@@ -39,7 +39,7 @@ get_header(); ?>
                title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
           </h2>
           <p class="meta">
-            Posted by <?php the_author_posts_link(); ?> <?php wp_fuzzy_time(); ?>
+            Posted by <?php the_author_posts_link(); ?> <?php basis_fuzzy_time(); ?>
           </p>
         </header> <!-- end article header -->
 

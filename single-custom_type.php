@@ -31,7 +31,7 @@ get_header(); ?>
           <div class="post-info">
   					<h2><?php the_title(); ?></h2>
   					<p class="meta">
-              by <?php the_author_posts_link(); ?> <time><?php wp_fuzzy_time(); ?></time><br />
+              by <?php the_author_posts_link(); ?> <time><?php basis_fuzzy_time(); ?></time><br />
               in category <?php the_category(', '); ?> containing <?php word_count(); ?> words</p>
           </div>
   			</header> <!-- end article header -->

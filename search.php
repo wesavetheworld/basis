@@ -26,7 +26,7 @@ get_header(); ?>
 					     title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 					</h2>
 					<p class="meta">
-            Posted <time><?php wp_fuzzy_time(); ?></time>
+            Posted <time><?php basis_fuzzy_time(); ?></time>
             by <?php the_author_posts_link(); ?>
             categorized: <?php the_category(', '); ?>
             containing: <?php word_count(); ?> words

@@ -122,7 +122,7 @@ function  basis_admin_footer_text() {
 	      using the <a href="https://github.com/humanshell/Basis">Basis Theme Framework</a>';
 }
 
-function wp_fuzzy_time() {
+function basis_fuzzy_time() {
 	$postTime       = get_the_time("U");
   $currentTime    = time();
   $timeDifference = $currentTime - $postTime;
