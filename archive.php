@@ -33,12 +33,12 @@ get_header(); ?>
 
         <header class="clearfix">
           <h2>
-            <?php edit_post_link('✍','',' '); ?>
             <a href="<?php the_permalink() ?>"
                rel="bookmark"
                title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
           </h2>
           <p class="meta">
+            <?php edit_post_link('✍','',' '); ?>
             Posted by <?php the_author_posts_link(); ?> <?php basis_fuzzy_time(); ?>
           </p>
         </header> <!-- end article header -->
