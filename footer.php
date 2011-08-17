@@ -61,10 +61,6 @@
 	</div> <!-- end #page-wrap -->
 	
 	<?php wp_footer(); // js scripts are inserted using this function ?>
-	
-	<!-- Insert Analytics -->
-	
-	<!-- End Analytics -->
 
 </body>
 
