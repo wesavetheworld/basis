@@ -55,7 +55,7 @@ function remove_head_junk() {
  */
 add_action('template_redirect', 'basis_scripts');
 function basis_scripts() {
-	wp_register_script('modernizr', get_template_directory_uri().'/library/js/modernizr-2.0.4.js');
+	wp_register_script('modernizr', get_template_directory_uri().'/library/js/modernizr.basis.js');
 	wp_enqueue_script('modernizr');
 	if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1))
 		wp_enqueue_script('comment-reply');
