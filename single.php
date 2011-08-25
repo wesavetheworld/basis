@@ -19,7 +19,7 @@ get_header(); ?>
 				<header>
 					<h2 class="h1"><?php edit_post_link('✍','',' '); ?><?php the_title(); ?></h2>
 					<p class="meta">
-            the following <?php word_count(); ?> words were written by <?php the_author_posts_link(); ?><br />
+            the following <?php word_count(); ?> words were posted by <?php the_author_posts_link(); ?><br />
             <?php basis_fuzzy_time(); ?> (<?php the_date(); ?> at <?php the_time(); ?>)
           </p>
 				</header> <!-- end article header -->
