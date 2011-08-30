@@ -64,15 +64,19 @@ function basis_scripts() {
 
 /**
  *
- * basis_styles() - Dynamically include reset stylesheet in the head
+ * basis_styles() - Dynamically include stylesheets in the head
  *
  * default style.css
+ * universal IE6 reset http://stuffandnonsense.co.uk/blog/about/universal_internet_explorer_6_css/
  *
  */
 add_action('wp_print_styles', 'basis_styles');
 function basis_styles() {
   wp_register_style('basis-reset', get_template_directory_uri().'/library/css/reset.css');
+  wp_register_style('basis-ie6', 'http://universal-ie6-css.googlecode.com/files/ie6.1.1.css', array('basis-reset'));
+  $GLOBALS['wp_styles']->add_data( 'basis-ie6', 'conditional', 'lt IE 7' );
   wp_enqueue_style('basis-reset');
+  wp_enqueue_style('basis-ie6');
 }
 
 
