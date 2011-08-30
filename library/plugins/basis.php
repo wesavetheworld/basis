@@ -73,10 +73,7 @@ function basis_scripts() {
 add_action('wp_print_styles', 'basis_styles');
 function basis_styles() {
   wp_register_style('basis-reset', get_template_directory_uri().'/library/css/reset.css');
-  wp_register_style('basis-ie6', 'http://universal-ie6-css.googlecode.com/files/ie6.1.1.css', array('basis-reset'));
-  $GLOBALS['wp_styles']->add_data( 'basis-ie6', 'conditional', 'lt IE 7' );
   wp_enqueue_style('basis-reset');
-  wp_enqueue_style('basis-ie6');
 }
 
 
