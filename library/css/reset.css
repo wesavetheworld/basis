@@ -1,31 +1,31 @@
-/******************************************************************
-
-Basis Theme Reset Stylesheet
-
-Designed by Dominic Giglio
-http://utadvisors.com/basis
-
-Adapted from the Bones Theme Template
-http://themble.com/bones
-eddie@themble.com
-
-And the HTML5Boilerplate Project
-http://html5boilerplate.com/
-
-Design Copyright 2010. All Rights Reserved. 
-XHTML/CSS released under the GPLv3 licence.
-
-Special Thanks to:
-Paul Irish & the HTML5 Boilerplate team
-Nicolas Gallagher
-Jonathan Neal
-Kroc Camen :)
-
-I ADVISE AGAINST EDITING THESE FILES. While you can style your site
-from this file it's highly reccomended that you use the style.css 
-file included with the Basis Child Theme or a child theme of your own.
-
-******************************************************************/
+/**
+ *
+ * Basis Theme Reset Stylesheet
+ * 
+ * Designed by Dominic Giglio
+ * http://utadvisors.com/basis
+ * 
+ * Adapted from the Bones Theme Template
+ * http://themble.com/bones
+ * eddie@themble.com
+ * 
+ * And the HTML5Boilerplate Project
+ * http://html5boilerplate.com/
+ * 
+ * Design Copyright 2010. All Rights Reserved. 
+ * XHTML/CSS released under the GPLv3 licence.
+ * 
+ * Special Thanks to:
+ * Paul Irish & the HTML5 Boilerplate team
+ * Nicolas Gallagher
+ * Jonathan Neal
+ * Kroc Camen :)
+ * 
+ * I ADVISE AGAINST EDITING THESE FILES. While you can style your site
+ * from this file it's highly reccomended that you use the style.css 
+ * file included with the Basis Child Theme or a child theme of your own.
+ *
+ *************************************************************************/
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
@@ -88,9 +88,9 @@ td { vertical-align: top; }
 .clearfix { zoom: 1; }
 
 
-/******************************************************************
-COMMON & REUSABLE WORDPRESS STYLING
-******************************************************************/
+/**
+ * COMMON & REUSABLE WORDPRESS STYLING
+ *****************************************************************/
 
 /* floats */
 .left { float: left; }
