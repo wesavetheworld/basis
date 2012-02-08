@@ -12,48 +12,20 @@
 		
 			<div id="inner-footer" class="clearfix">
 			  
-			  <div id="footer-widget-1" role="complementary">
+			  <div id="primary-footer-widget" role="complementary">
 
-          <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-1')) : else : ?>
+          <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('primary-footer-widget')) : else : ?>
 
-        		<!-- This content shows up if there are no widgets defined in the backend. -->
+        		<!-- This content displays if there is no primary footer widget defined -->
 
         		<div class="help">
-        			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for Footer Widget 1.</p>
+        			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for the Primary Footer Widget.</p>
         		</div>
         		
         	<?php endif; ?>
         		
         </div><!-- End #footer-widget-1 -->
         		
-        <div id="footer-widget-2" role="complementary">
-
-      	  <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-2')) : else : ?>
-
-        		<!-- This content shows up if there are no widgets defined in the backend. -->
-
-        		<div class="help">
-        			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for Footer Widget 2.</p>
-        		</div>
-        		
-        	<?php endif; ?>
-        	
-        </div><!-- End #footer-widget-2 -->
-        
-        <div id="footer-widget-3" role="complementary">
-        		
-      	  <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('footer-widget-3')) : else : ?>
-
-        		<!-- This content shows up if there are no widgets defined in the backend. -->
-
-        		<div class="help">
-        			<p>Please <a href="<?php echo home_url(); ?>/wp-admin/widgets.php">activate</a> some Widgets for Footer Widget 3.</p>
-        		</div>
-        		
-        	<?php endif; ?>
-        	
-        </div><!-- End #footer-widget-3 -->
-			
 			</div> <!-- end #inner-footer -->
 			
 		</footer> <!-- end footer -->

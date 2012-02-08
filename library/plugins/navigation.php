@@ -75,7 +75,7 @@ function basis_menu_fallback() {
 }
 
 
-/* Setup the Basis Sidebar
+/* Setup the Primary Basis Sidebar
 *******************************************************************************/
 
 // Create a single sidebar. To add more sidebars just redefine this function in
@@ -95,38 +95,24 @@ if (!function_exists('basis_sidebars')) {
   add_action('widgets_init', 'basis_sidebars');
 }
 
-/* Setup the Basis Footer Widgets
+/* Setup the Primary Basis Footer Widget
 *******************************************************************************/
 
-// Create 3 footer widget areas
-function basis_footer_widgets() {
-  if ( function_exists('register_sidebar') ) {
-    register_sidebar(array(
-    	'name'          => __('Footer Widget 1'),
-      'id'            => "footer-widget-1",
-      'before_widget' => '<li id="%1$s" class="footer-widget %2$s">',
-      'after_widget'  => '</li>',
-      'before_title'  => '<h4 class="footer-widgettitle">',
-      'after_title'   => '</h4>'));
-      
-    register_sidebar(array(
-    	'name'          => __('Footer Widget 2'),
-      'id'            => "footer-widget-2",
-      'before_widget' => '<li id="%1$s" class="footer-widget %2$s">',
-      'after_widget'  => '</li>',
-      'before_title'  => '<h4 class="footer-widgettitle">',
-      'after_title'   => '</h4>'));
-      
-    register_sidebar(array(
-    	'name'          => __('Footer Widget 3'),
-      'id'            => "footer-widget-3",
-      'before_widget' => '<li id="%1$s" class="footer-widget %2$s">',
-      'after_widget'  => '</li>',
-      'before_title'  => '<h4 class="footer-widgettitle">',
-      'after_title'   => '</h4>'));
+// Create a single footer widget area. To add more widgets, redefine this 
+// function in your child theme
+if (!function_exists('basis_footer_widgets')) {
+  function basis_footer_widgets() {
+    if ( function_exists('register_sidebar') ) {
+      register_sidebar(array(
+        'name'          => __('Primary Footer Widget'),
+        'id'            => "primary-footer-widget",
+        'before_widget' => '<li id="%1$s" class="footer-widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h4 class="footer-widgettitle">',
+        'after_title'   => '</h4>'));
+    }
   }
+  add_action('widgets_init', 'basis_footer_widgets');
 }
-add_action('widgets_init', 'basis_footer_widgets');
-
 
 ?>
