@@ -10,11 +10,11 @@
 
 		<footer role="contentinfo">
 		
-			<div id="inner-footer" class="clearfix">
+			<div id="inner_footer" class="clearfix">
 			  
-			  <div id="primary-footer-widget" role="complementary">
+			  <div id="primary_footer_widget" role="complementary">
 
-          <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('primary-footer-widget')) : else : ?>
+          <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('primary_footer_widget')) : else : ?>
 
         		<!-- This content displays if there is no primary footer widget defined -->
 
@@ -24,13 +24,13 @@
         		
         	<?php endif; ?>
         		
-        </div><!-- End #footer-widget-1 -->
+        </div><!-- End #primary_footer_widget -->
         		
-			</div> <!-- end #inner-footer -->
+			</div> <!-- end #inner_footer -->
 			
 		</footer> <!-- end footer -->
 	
-	</div> <!-- end #page-wrap -->
+	</div> <!-- end #page_wrap -->
 	
 	<?php wp_footer(); // js scripts are inserted using this function ?>
 
