@@ -8,24 +8,24 @@
 * a child theme if necessary.
 *
 *  MENUS:
-*  (remove in child theme using remove_action('init', 'basis_menus');)
-*  1.) Declare a custom function to setup 2 menus
-*  2.) Declare a custom function to display the primary menu in a theme template
-*  3.) Declare a custom function to display the secondary menu in a theme template
+*  remove in child theme using remove_action('init', 'basis_menus');
+*  1.) A custom function to setup 2 menus
+*  2.) A custom function to display the primary menu in a theme template
+*  3.) A custom function to display the secondary menu in a theme template
 *  4.) Create the basis primary menu fallback
 *
 *  SIDEBARS:
-*  (remove in child theme using remove_action('widgets_init', 'basis_sidebars');)
-*  1.) Declare a custom function to setup 2 sidebars
+*  remove in child theme using remove_action('widgets_init', 'basis_sidebars');
+*  1.) A custom function to setup 2 sidebars
 *
 *  FOOTER WIDGETS:
-*  (remove in child theme using remove_action('widgets_init', 'basis_footer_widgets');)
-*  1.) Declare a custom function to setup 3 footer widget areas
+*  remove in child theme using remove_action('widgets_init', 'basis_footer_widgets');
+*  1.) A custom function to setup 3 footer widget areas
 *
 */
 
 /* Setup the Basis Menus
-***********************************************************************************/
+*******************************************************************************/
 
 // Call register_nav_menus from a custom function so it can be removed by a
 // child theme if it wants to declare it's own custom menus.
@@ -76,7 +76,7 @@ function basis_menu_fallback() {
 
 
 /* Setup the Basis Sidebars
-***********************************************************************************/
+*******************************************************************************/
 
 // Create the primary and secondary sidebars
 function basis_sidebars() {
@@ -102,7 +102,7 @@ add_action('widgets_init', 'basis_sidebars');
 
 
 /* Setup the Basis Footer Widgets
-***********************************************************************************/
+*******************************************************************************/
 
 // Create 3 footer widget areas
 function basis_footer_widgets() {
