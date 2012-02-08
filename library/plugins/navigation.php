@@ -16,11 +16,11 @@
 *
 *  SIDEBARS:
 *  remove in child theme using remove_action('widgets_init', 'basis_sidebars');
-*  1.) A custom function to setup 2 sidebars
+*  1.) A custom function to setup 1 sidebar
 *
 *  FOOTER WIDGETS:
 *  remove in child theme using remove_action('widgets_init', 'basis_footer_widgets');
-*  1.) A custom function to setup 3 footer widget areas
+*  1.) A custom function to setup 1 footer widget area
 *
 */
 
@@ -75,31 +75,25 @@ function basis_menu_fallback() {
 }
 
 
-/* Setup the Basis Sidebars
+/* Setup the Basis Sidebar
 *******************************************************************************/
 
-// Create the primary and secondary sidebars
-function basis_sidebars() {
-  if ( function_exists('register_sidebar') ) {
-    register_sidebar(array(
-    	'name'          => __('Primary Sidebar'),
-      'id'            => "primary-sidebar",
-      'before_widget' => '<li id="%1$s" class="sidebar-widget %2$s">',
-      'after_widget'  => '</li>',
-      'before_title'  => '<h4 class="sidebar-widgettitle">',
-      'after_title'   => '</h4>'));
-      
-    register_sidebar(array(
-    	'name'          => __('Secondary Sidebar'),
-      'id'            => "secondary-sidebar",
-      'before_widget' => '<li id="%1$s" class="sidebar-widget %2$s">',
-      'after_widget'  => '</li>',
-      'before_title'  => '<h4 class="sidebar-widgettitle">',
-      'after_title'   => '</h4>'));
+// Create a single sidebar. To add more sidebars just redefine this function in
+// your child theme
+if (!function_exists('basis_sidebars')) {
+  function basis_sidebars() {
+    if ( function_exists('register_sidebar') ) {
+      register_sidebar(array(
+        'name'          => __('Primary Sidebar'),
+        'id'            => "primary-sidebar",
+        'before_widget' => '<li id="%1$s" class="sidebar-widget %2$s">',
+        'after_widget'  => '</li>',
+        'before_title'  => '<h4 class="sidebar-widgettitle">',
+        'after_title'   => '</h4>'));
+    }
   }
+  add_action('widgets_init', 'basis_sidebars');
 }
-add_action('widgets_init', 'basis_sidebars');
-
 
 /* Setup the Basis Footer Widgets
 *******************************************************************************/
